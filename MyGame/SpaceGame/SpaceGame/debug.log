@@ -13,25 +13,25 @@
                              (_/                        
 Indielib version: 0.5.1
 
-[Init time]: (Friday, 26 of June 2015)
+[Init time]: (Tuesday, 7 of July 2015)
 
-[20:23:53] [ BEGIN ] -- Creating Render --
+[20:18:13] [ BEGIN ] -- Creating Render --
                      {
-[20:23:53] [ BEGIN ]    -- Creating SDL window --
+[20:18:13] [ BEGIN ]    -- Creating SDL window --
                         {
            [  OK   ]       Window created
-           [ INFO  ]       Mode: Full screen
+           [ INFO  ]       Mode: Window
                         }
-[20:23:57] [  END  ]    Window OK [Elapsed time = 4.174 seg]
-[20:23:57] [ BEGIN ]    -- Initializing Direct3D --
+[20:18:14] [  END  ]    Window OK [Elapsed time = 0.029 seg]
+[20:18:14] [ BEGIN ]    -- Initializing Direct3D --
                         {
            [  OK   ]       Creating D3D object
            [  OK   ]       Obtaining the adapter
            [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
            [ INFO  ]       Video mode: 800 x 600 x 32
                         }
-[20:23:59] [  END  ]    Direct3D OK [Elapsed time = 1.621 seg]
-[20:23:59] [ BEGIN ]    -- Hardware information --
+[20:18:14] [  END  ]    Direct3D OK [Elapsed time = 0.253 seg]
+[20:18:14] [ BEGIN ]    -- Hardware information --
                         {
            [ INFO  ]       Direct3D version: DXSDK November 2007
            [ INFO  ]       Mark: ?
@@ -41,85 +41,180 @@ Indielib version: 0.5.1
            [ INFO  ]       Vertex Shader: 3 . 0 
            [ INFO  ]       Pixel Shader: 3 . 0
                         }
-[20:23:59] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
-[20:23:59] [ BEGIN ]    -- Initializing ImageManager --
+[20:18:14] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Initializing ImageManager --
                         {
            [  OK   ]       Preparing ImageManager
            [ INFO  ]       Using FreeImage version:  3.15.3
            [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
                         }
-[20:23:59] [  END  ]    ImageManager Initialised [Elapsed time = 0.001 seg]
-[20:23:59] [ BEGIN ]    -- Initializing SurfaceManager --
+[20:18:14] [  END  ]    ImageManager Initialised [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Initializing SurfaceManager --
                         {
            [  OK   ]       Checking IND_Render
            [  OK   ]       Checking IND_ImageManager
                         }
-[20:23:59] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
-[20:23:59] [ BEGIN ]    -- Initializing AnimationManager --
+[20:18:14] [  END  ]    SurfaceManager OK [Elapsed time = 0.001 seg]
+[20:18:14] [ BEGIN ]    -- Initializing AnimationManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[20:23:59] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
-[20:23:59] [ BEGIN ]    -- Initializing FontManager --
+[20:18:14] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Initializing FontManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[20:23:59] [  END  ]    FontManager OK [Elapsed time = 0 seg]
-[20:23:59] [ BEGIN ]    -- Initializing Entity2dManager --
+[20:18:14] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Initializing Entity2dManager --
                         {
            [  OK   ]       Preparing Entity2dManager
            [  OK   ]        Checking IND_Render
                         }
-[20:23:59] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
-[20:24:01] [ BEGIN ]    -- Finalizing Entity2dManager --
+[20:18:14] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Loading Image --
                         {
-[20:24:01] [ BEGIN ]       -- Freeing 2d entities --
+           [ INFO  ]       File name: ../SpaceGame/resources/hubble-space-wallpapers.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 2560 x 1600
+           [ INFO  ]       Bpp: 3
+           [ INFO  ]       Format: IND_RGB
+                        }
+[20:18:14] [  END  ]    Image loaded [Elapsed time = 0.105 seg]
+[20:18:14] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/hubble-space-wallpapers.png
+           [  OK   ]       Image type converted to 32-bit RGB implicitly.
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 2560 x 1600
+           [ INFO  ]       Block size: 4096 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 1536 x 448
+                        }
+[20:18:14] [  END  ]    Surface created [Elapsed time = 0.068 seg]
+[20:18:14] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/hubble-space-wallpapers.png
+                        }
+[20:18:14] [  END  ]    Ok [Elapsed time = 0.002 seg]
+[20:18:14] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 0
+                        }
+[20:18:14] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Loading Image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/a4203_planetes_g.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 614 x 599
+           [ INFO  ]       Bpp: 3
+           [ INFO  ]       Format: IND_RGB
+                        }
+[20:18:14] [  END  ]    Image loaded [Elapsed time = 0.011 seg]
+[20:18:14] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/a4203_planetes_g.png
+           [  OK   ]       Image type converted to 32-bit RGB implicitly.
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 614 x 599
+           [ INFO  ]       Block size: 1024 x 1024
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 410 x 425
+                        }
+[20:18:14] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[20:18:14] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/a4203_planetes_g.png
+                        }
+[20:18:14] [  END  ]    Ok [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 1
+                        }
+[20:18:14] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Loading Image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/rocket.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 353 x 253
+           [ INFO  ]       Bpp: 4
+           [ INFO  ]       Format: IND_RGBA
+                        }
+[20:18:14] [  END  ]    Image loaded [Elapsed time = 0.007 seg]
+[20:18:14] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/rocket.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 353 x 253
+           [ INFO  ]       Block size: 512 x 256
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 159 x 3
+                        }
+[20:18:14] [  END  ]    Surface created [Elapsed time = 0 seg]
+[20:18:14] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/rocket.png
+                        }
+[20:18:14] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[20:18:14] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 2
+                        }
+[20:18:14] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[20:18:16] [ BEGIN ]    -- Finalizing Entity2dManager --
+                        {
+[20:18:16] [ BEGIN ]       -- Freeing 2d entities --
+                           {
+           [ INFO  ]          Freeing 2d entity: 0
+           [ INFO  ]          Freeing 2d entity: 0
+           [ INFO  ]          Freeing 2d entity: 0
+                           }
+[20:18:16] [  END  ]       Entities freed [Elapsed time = 0.001 seg]
+                        }
+[20:18:16] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0.001 seg]
+[20:18:16] [ BEGIN ]    -- Finalizing FontManager --
+                        {
+[20:18:16] [ BEGIN ]       -- Freeing fonts --
                            {
                            }
-[20:24:01] [  END  ]       Entities freed [Elapsed time = 0 seg]
+[20:18:16] [  END  ]       Fonts freed [Elapsed time = 0 seg]
                         }
-[20:24:01] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
-[20:24:01] [ BEGIN ]    -- Finalizing FontManager --
+[20:18:16] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
+[20:18:16] [ BEGIN ]    -- Finalizing AnimationManager --
                         {
-[20:24:01] [ BEGIN ]       -- Freeing fonts --
+[20:18:16] [ BEGIN ]       -- Freeing animations --
                            {
                            }
-[20:24:01] [  END  ]       Fonts freed [Elapsed time = 0 seg]
+[20:18:16] [  END  ]       Animations freed [Elapsed time = 0 seg]
                         }
-[20:24:01] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
-[20:24:01] [ BEGIN ]    -- Finalizing AnimationManager --
+[20:18:16] [  END  ]    AnimationManager finalized [Elapsed time = 0 seg]
+[20:18:16] [ BEGIN ]    -- Finalizing SurfaceManager --
                         {
-[20:24:01] [ BEGIN ]       -- Freeing animations --
+[20:18:16] [ BEGIN ]       -- Freeing surfaces --
+                           {
+           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:                           }
+[20:18:16] [  END  ]       Surfaces freed [Elapsed time = 0.008 seg]
+                        }
+[20:18:16] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.01 seg]
+[20:18:16] [ BEGIN ]    -- Finalizing ImageManager --
+                        {
+[20:18:16] [ BEGIN ]       -- Freeing images --
                            {
                            }
-[20:24:01] [  END  ]       Animations freed [Elapsed time = 0 seg]
+[20:18:16] [  END  ]       Images freed [Elapsed time = 0.003 seg]
                         }
-[20:24:01] [  END  ]    AnimationManager finalized [Elapsed time = 0 seg]
-[20:24:01] [ BEGIN ]    -- Finalizing SurfaceManager --
-                        {
-[20:24:01] [ BEGIN ]       -- Freeing surfaces --
-                           {
-                           }
-[20:24:01] [  END  ]       Surfaces freed [Elapsed time = 0 seg]
-                        }
-[20:24:01] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0 seg]
-[20:24:01] [ BEGIN ]    -- Finalizing ImageManager --
-                        {
-[20:24:01] [ BEGIN ]       -- Freeing images --
-                           {
-                           }
-[20:24:01] [  END  ]       Images freed [Elapsed time = 0 seg]
-                        }
-[20:24:01] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
-[20:24:01] [ BEGIN ]    -- Finalizing Direct3D --
+[20:18:16] [  END  ]    ImageManager finalized [Elapsed time = 0.003 seg]
+[20:18:16] [ BEGIN ]    -- Finalizing Direct3D --
                         {
            [  OK   ]       Finalizing the Device
            [  OK   ]       Finalizing D3D object
-[20:24:02] [ BEGIN ]       -- Finalizing the window --
+[20:18:16] [ BEGIN ]       -- Finalizing the window --
                            {
                            }
-[20:24:03] [  END  ]       Window finalized [Elapsed time = 0.341 seg]
+[20:18:16] [  END  ]       Window finalized [Elapsed time = 0.012 seg]
                         }
-[20:24:03] [  END  ]    Direct3D finalized  [Elapsed time = 1.956 seg]
+[20:18:16] [  END  ]    Direct3D finalized  [Elapsed time = 0.059 seg]
