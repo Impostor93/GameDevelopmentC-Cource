@@ -13,1152 +13,567 @@
                              (_/                        
 Indielib version: 0.5.1
 
-[Init time]: (Monday, 22 of June 2015)
+[Init time]: (Sunday, 19 of July 2015)
 
-[12:36:32] [ BEGIN ] -- Creating Render --
+[22:27:45] [ BEGIN ] -- Creating Render --
                      {
-[12:36:32] [ BEGIN ]    -- Creating SDL window --
+[22:27:45] [ BEGIN ]    -- Creating SDL window --
                         {
            [  OK   ]       Window created
            [ INFO  ]       Mode: Window
                         }
-[12:36:32] [  END  ]    Window OK [Elapsed time = 0.031 seg]
-[12:36:32] [ BEGIN ]    -- Initializing Direct3D --
+[22:27:45] [  END  ]    Window OK [Elapsed time = 0.021 seg]
+[22:27:45] [ BEGIN ]    -- Initializing Direct3D --
                         {
            [  OK   ]       Creating D3D object
            [  OK   ]       Obtaining the adapter
            [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
            [ INFO  ]       Video mode: 800 x 600 x 32
                         }
-[12:36:32] [  END  ]    Direct3D OK [Elapsed time = 0.072 seg]
-[12:36:32] [ BEGIN ]    -- Hardware information --
+[22:27:45] [  END  ]    Direct3D OK [Elapsed time = 0.014 seg]
+[22:27:45] [ BEGIN ]    -- Hardware information --
                         {
            [ INFO  ]       Direct3D version: DXSDK November 2007
-           [ INFO  ]       Mark: Nvidia
-           [ INFO  ]       Chip: NVIDIA GeForce 8800 GT 
+           [ INFO  ]       Mark: ?
+           [ INFO  ]       Chip: Intel(R) HD Graphics 4000
            [ INFO  ]       Primitive antialising (D3DRS_ANTIALIASEDLINEENABLE): No
            [ INFO  ]       Maximum texture size: 8192 x 8192
            [ INFO  ]       Vertex Shader: 3 . 0 
            [ INFO  ]       Pixel Shader: 3 . 0
                         }
-[12:36:32] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
-[12:36:32] [ BEGIN ]    -- Initializing ImageManager --
+[22:27:45] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
+[22:27:45] [ BEGIN ]    -- Initializing ImageManager --
                         {
            [  OK   ]       Preparing ImageManager
            [ INFO  ]       Using FreeImage version:  3.15.3
            [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
                         }
-[12:36:32] [  END  ]    ImageManager Initialised [Elapsed time = 0.018 seg]
-[12:36:32] [ BEGIN ]    -- Initializing SurfaceManager --
+[22:27:45] [  END  ]    ImageManager Initialised [Elapsed time = 0 seg]
+[22:27:45] [ BEGIN ]    -- Initializing SurfaceManager --
                         {
            [  OK   ]       Checking IND_Render
            [  OK   ]       Checking IND_ImageManager
                         }
-[12:36:32] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
-[12:36:32] [ BEGIN ]    -- Initializing AnimationManager --
+[22:27:45] [  END  ]    SurfaceManager OK [Elapsed time = 0.001 seg]
+[22:27:45] [ BEGIN ]    -- Initializing AnimationManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[12:36:32] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
-[12:36:32] [ BEGIN ]    -- Initializing FontManager --
+[22:27:45] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[22:27:45] [ BEGIN ]    -- Initializing FontManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[12:36:32] [  END  ]    FontManager OK [Elapsed time = 0 seg]
-[12:36:32] [ BEGIN ]    -- Initializing Entity2dManager --
+[22:27:45] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[22:27:45] [ BEGIN ]    -- Initializing Entity2dManager --
                         {
            [  OK   ]       Preparing Entity2dManager
            [  OK   ]        Checking IND_Render
                         }
-[12:36:32] [  END  ]    Entity2dManager OK [Elapsed time = 0.001 seg]
-[12:36:32] [ BEGIN ]    -- Loading Image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/blue_background.jpg
-           [ INFO  ]       Extension: jpg
-           [ INFO  ]       Size: 800 x 600
-           [ INFO  ]       Bpp: 3
-           [ INFO  ]       Format: IND_RGB
-                        }
-[12:36:33] [  END  ]    Image loaded [Elapsed time = 0.051 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/blue_background.jpg
-           [  OK   ]       Image type converted to 32-bit RGB implicitly.
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 800 x 600
-           [ INFO  ]       Block size: 1024 x 1024
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 224 x 424
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.023 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/blue_background.jpg
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Loading Image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/star.png
-           [ INFO  ]       Extension: png
-           [ INFO  ]       Size: 86 x 83
-           [ INFO  ]       Bpp: 4
-           [ INFO  ]       Format: IND_RGBA
-                        }
-[12:36:33] [  END  ]    Image loaded [Elapsed time = 0.046 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/star.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 86 x 83
-           [ INFO  ]       Block size: 128 x 128
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 42 x 45
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/star.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Parsing and loading animation --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/character1.xml
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_01.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 116 x 198
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.009 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_02.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 114 x 200
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.01 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_03.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 110 x 202
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.007 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_04.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 106 x 200
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.01 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_05.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 106 x 200
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.008 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_06.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 106 x 202
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.006 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_07.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 106 x 204
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.008 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_08.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 106 x 202
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.005 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_09.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 102 x 198
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.009 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_10.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 102 x 196
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.011 seg]
-                        }
-[12:36:33] [  END  ]    Animation parsed and loaded [Elapsed time = 0.103 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_01.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 116 x 198
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 12 x 58
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_01.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_02.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 114 x 200
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 14 x 56
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_02.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_03.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 110 x 202
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 18 x 54
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_03.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_04.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 106 x 200
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 22 x 56
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_04.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_05.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 106 x 200
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 22 x 56
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_05.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_06.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 106 x 202
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 22 x 54
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_06.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_07.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 106 x 204
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 22 x 52
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_07.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_08.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 106 x 202
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 22 x 54
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_08.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_09.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 102 x 198
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 26 x 58
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_09.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/advance/Rock_Avanza_10.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 102 x 196
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 26 x 60
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/advance/Rock_Avanza_10.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Parsing and loading animation --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/character2.xml
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_01.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 148 x 194
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.013 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_02.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 148 x 192
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.007 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_03.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 148 x 188
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.005 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_04.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 150 x 186
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.004 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_05.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 150 x 188
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.012 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_06.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 150 x 192
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.004 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_07.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 148 x 194
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.014 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_08.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 148 x 194
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.007 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/stop/Terry_Parado_09.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 148 x 192
-           [ INFO  ]          Bpp: 1
-           [ INFO  ]          Format: IND_COLOUR_INDEX
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.014 seg]
-                        }
-[12:36:33] [  END  ]    Animation parsed and loaded [Elapsed time = 0.099 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_01.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 148 x 194
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 108 x 62
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_01.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_02.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 148 x 192
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 108 x 64
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_02.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_03.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 148 x 188
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 108 x 68
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_03.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_04.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 150 x 186
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 106 x 70
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_04.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_05.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 150 x 188
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 106 x 68
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_05.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_06.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 150 x 192
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 106 x 64
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_06.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_07.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 148 x 194
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 108 x 62
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_07.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_08.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 148 x 194
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 108 x 62
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_08.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/stop/Terry_Parado_09.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 148 x 192
-           [ INFO  ]       Block size: 256 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 108 x 64
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/stop/Terry_Parado_09.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Parsing and loading animation --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust.xml
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust01.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.016 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust02.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust03.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust04.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.008 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust05.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.007 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust06.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.012 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust06.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.005 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust07.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.006 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust08.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.01 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust09.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.005 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust10.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.003 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust11.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.012 seg]
-[12:36:33] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust12.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 96 x 138
-           [ INFO  ]          Bpp: 3
-           [ INFO  ]          Format: IND_RGB
-                           }
-[12:36:33] [  END  ]       Image loaded [Elapsed time = 0.011 seg]
-                        }
-[12:36:33] [  END  ]    Animation parsed and loaded [Elapsed time = 0.11 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust01.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust01.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust02.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust02.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust03.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust03.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust04.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust04.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust05.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust05.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust06.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust06.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust06.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust06.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust07.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust07.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust08.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust08.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust09.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust09.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust10.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust10.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust11.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust11.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/dust/kof2k-teleportdust12.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 96 x 138
-           [ INFO  ]       Block size: 128 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 32 x 118
-                        }
-[12:36:33] [  END  ]    Surface created [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/dust/kof2k-teleportdust12.png
-                        }
-[12:36:33] [  END  ]    Ok [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Adding 2d entity --
+[22:27:45] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[22:27:45] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 0
                         }
-[12:36:33] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Adding 2d entity --
+[22:27:45] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[22:27:45] [ BEGIN ]    -- Parsing and loading animation --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion.xml
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/1.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.023 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/2.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.023 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/3.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.023 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/4.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.023 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/5.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.026 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/6.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.032 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/7.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.038 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/8.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.038 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/9.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.034 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/10.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.035 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/11.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.034 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/12.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.034 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/13.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:45] [  END  ]       Image loaded [Elapsed time = 0.035 seg]
+[22:27:45] [ BEGIN ]       -- Loading Image --
+                           {
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/14.png
+           [ INFO  ]          Extension: png
+           [ INFO  ]          Size: 600 x 1200
+           [ INFO  ]          Bpp: 4
+           [ INFO  ]          Format: IND_RGBA
+                           }
+[22:27:46] [  END  ]       Image loaded [Elapsed time = 0.034 seg]
+                        }
+[22:27:46] [  END  ]    Animation parsed and loaded [Elapsed time = 0.435 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/1.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.008 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/1.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/2.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.007 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/2.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/3.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/3.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/4.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/4.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/5.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.007 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/5.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/6.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/6.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/7.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/7.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/8.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/8.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/9.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/9.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/10.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.008 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/10.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/11.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.008 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/11.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/12.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.008 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/12.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/13.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.008 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/13.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/14.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 424 x 848
+                        }
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.009 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/14.png
+                        }
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 1
                         }
-[12:36:33] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Adding 2d entity --
+[22:27:46] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[22:27:46] [ BEGIN ]    -- Loading Image --
                         {
-           [ INFO  ]       Name: 2
+           [ INFO  ]       File name: ../SpaceGame/resources/galaxy.jpg
+           [ INFO  ]       Extension: jpg
+           [ INFO  ]       Size: 1000 x 625
+           [ INFO  ]       Bpp: 3
+           [ INFO  ]       Format: IND_RGB
                         }
-[12:36:33] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Adding 2d entity --
+[22:27:46] [  END  ]    Image loaded [Elapsed time = 0.03 seg]
+[22:27:46] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       Name: 3
+           [ INFO  ]       From image: ../SpaceGame/resources/galaxy.jpg
+           [  OK   ]       Image type converted to 32-bit RGB implicitly.
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 1000 x 625
+           [ INFO  ]       Block size: 1024 x 1024
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 24 x 399
                         }
-[12:36:33] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[12:36:33] [ BEGIN ]    -- Adding 2d entity --
+[22:27:46] [  END  ]    Surface created [Elapsed time = 0.006 seg]
+[22:27:46] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       Name: 4
+           [ INFO  ]       File name: ../SpaceGame/resources/galaxy.jpg
                         }
-[12:36:33] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]    -- Finalizing Entity2dManager --
+[22:27:46] [  END  ]    Ok [Elapsed time = 0 seg]
+[22:27:48] [ BEGIN ]    -- Finalizing Entity2dManager --
                         {
-[12:36:36] [ BEGIN ]       -- Freeing 2d entities --
+[22:27:48] [ BEGIN ]       -- Freeing 2d entities --
                            {
-           [ INFO  ]          Freeing 2d entity: 0
-           [ INFO  ]          Freeing 2d entity: 0
-           [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
                            }
-[12:36:36] [  END  ]       Entities freed [Elapsed time = 0.001 seg]
+[22:27:48] [  END  ]       Entities freed [Elapsed time = 0 seg]
                         }
-[12:36:36] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]    -- Finalizing FontManager --
+[22:27:48] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
+[22:27:48] [ BEGIN ]    -- Finalizing FontManager --
                         {
-[12:36:36] [ BEGIN ]       -- Freeing fonts --
+[22:27:48] [ BEGIN ]       -- Freeing fonts --
                            {
                            }
-[12:36:36] [  END  ]       Fonts freed [Elapsed time = 0 seg]
+[22:27:48] [  END  ]       Fonts freed [Elapsed time = 0 seg]
                         }
-[12:36:36] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]    -- Finalizing AnimationManager --
+[22:27:48] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
+[22:27:48] [ BEGIN ]    -- Finalizing AnimationManager --
                         {
-[12:36:36] [ BEGIN ]       -- Freeing animations --
+[22:27:48] [ BEGIN ]       -- Freeing animations --
                            {
-[12:36:36] [ BEGIN ]          -- Freeing animation --
+[22:27:48] [ BEGIN ]          -- Freeing animation --
                               {
-           [ INFO  ]             Name: ../SpaceGame/resources/animations/character1.xml
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+           [ INFO  ]             Name: ../SpaceGame/resources/animations/Ship_Explotion.xml
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.002 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.002 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.002 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
+                                 {
+                                 }
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.002 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
+                                 {
+                                 }
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
+                                 {
+                                 }
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]             -- Freeing surface --
+                                 {
+                                 }
+[22:27:48] [  END  ]             Ok [Elapsed time = 0.001 seg]
                               }
-[12:36:36] [  END  ]          Ok [Elapsed time = 0.004 seg]
-[12:36:36] [ BEGIN ]          -- Freeing animation --
-                              {
-           [ INFO  ]             Name: ../SpaceGame/resources/animations/character2.xml
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-                              }
-[12:36:36] [  END  ]          Ok [Elapsed time = 0.006 seg]
-[12:36:36] [ BEGIN ]          -- Freeing animation --
-                              {
-           [ INFO  ]             Name: ../SpaceGame/resources/animations/dust.xml
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[12:36:36] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[12:36:36] [  END  ]             Ok [Elapsed time = 0.001 seg]
-                              }
-[12:36:36] [  END  ]          Ok [Elapsed time = 0.009 seg]
+[22:27:48] [  END  ]          Ok [Elapsed time = 0.017 seg]
                            }
-[12:36:36] [  END  ]       Animations freed [Elapsed time = 0.019 seg]
+[22:27:48] [  END  ]       Animations freed [Elapsed time = 0.017 seg]
                         }
-[12:36:36] [  END  ]    AnimationManager finalized [Elapsed time = 0.019 seg]
-[12:36:36] [ BEGIN ]    -- Finalizing SurfaceManager --
+[22:27:48] [  END  ]    AnimationManager finalized [Elapsed time = 0.017 seg]
+[22:27:48] [ BEGIN ]    -- Finalizing SurfaceManager --
                         {
-[12:36:36] [ BEGIN ]       -- Freeing surfaces --
+[22:27:48] [ BEGIN ]       -- Freeing surfaces --
                            {
-           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:                           }
-[12:36:36] [  END  ]       Surfaces freed [Elapsed time = 0 seg]
+           [ INFO  ]          Freeing surface:                           }
+[22:27:48] [  END  ]       Surfaces freed [Elapsed time = 0.001 seg]
                         }
-[12:36:36] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]    -- Finalizing ImageManager --
+[22:27:48] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]    -- Finalizing ImageManager --
                         {
-[12:36:36] [ BEGIN ]       -- Freeing images --
+[22:27:48] [ BEGIN ]       -- Freeing images --
                            {
                            }
-[12:36:36] [  END  ]       Images freed [Elapsed time = 0 seg]
+[22:27:48] [  END  ]       Images freed [Elapsed time = 0.001 seg]
                         }
-[12:36:36] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
-[12:36:36] [ BEGIN ]    -- Finalizing Direct3D --
+[22:27:48] [  END  ]    ImageManager finalized [Elapsed time = 0.001 seg]
+[22:27:48] [ BEGIN ]    -- Finalizing Direct3D --
                         {
            [  OK   ]       Finalizing the Device
            [  OK   ]       Finalizing D3D object
-[12:36:36] [ BEGIN ]       -- Finalizing the window --
+[22:27:48] [ BEGIN ]       -- Finalizing the window --
                            {
                            }
-[12:36:36] [  END  ]       Window finalized [Elapsed time = 0.003 seg]
+[22:27:48] [  END  ]       Window finalized [Elapsed time = 0.012 seg]
                         }
-[12:36:36] [  END  ]    Direct3D finalized  [Elapsed time = 0.038 seg]
+[22:27:48] [  END  ]    Direct3D finalized  [Elapsed time = 0.02 seg]
