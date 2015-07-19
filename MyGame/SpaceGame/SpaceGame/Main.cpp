@@ -63,6 +63,8 @@
 //	mPlayer2->setAnimation(mAnimationCharacter2);				// Set the animation into the entity
 //
 //	// Dust explosion
+//	IND_Animation *mAnimationDust = IND_Animation::newAnimation();
+//	if (!mI->_animationManager->addToSurface(mAnimationDust, "../SpaceGame/resources/animations/dust.xml", IND_ALPHA, IND_16, 255, 0, 255)) return 0;
 //	IND_Entity2d *mDust = IND_Entity2d::newEntity2d();
 //	mI->_entity2dManager->add(mDust);					// Entity adding
 //	mDust->setAnimation(mAnimationDust);					// Set the animation into the entity
@@ -112,6 +114,7 @@
 #include "Planet.h"
 #include "IND_Animation.h"
 #include "IND_AnimationManager.h"
+#include "AnimatedGameEntity.h"
 
 /*
 ==================
@@ -125,11 +128,15 @@ int IndieLib()
 	CIndieLib *mI = CIndieLib::instance();
 	if (!mI->init()) return 0;
 
+	AnimatedGameEntity* ufo = new AnimatedGameEntity(mI, Position3D(200, 200, 1), "../SpaceGame/resources/animations/ufo.xml");
+	ufo->Draw();
 
-	// ----- Surface loading -----
+	//ufo->getINDIEntity()->setSequence(0);
+	ufo->getINDIEntity()->setNumReplays(1);
+	std::cout<< ufo->getINDIEntity()->getNumLines();
 
-	// Loading Background
-	
+	//ufo->setSequence(0);
+
 	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/hubble-space-wallpapers.png");
 	space->Draw();
 

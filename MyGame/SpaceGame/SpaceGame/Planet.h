@@ -2,9 +2,9 @@
 #ifndef PLANET
 #define PLANET
 
-#include "GameEntity.h"
+#include "StaticGameEntity.h"
 
-class Planet : public GameEntity
+class Planet : public StaticGameEntity
 {
 public:
 	Planet(CIndieLib* masterInstance, Position3D position, const char* path);

@@ -1,10 +1,11 @@
-﻿Build started 07/07/2015 20:18:09.
+﻿Build started 19/07/2015 18:53:49.
      1>Project "D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\SpaceGame\common\include" /I"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
          Main.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\Position3D.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\AnimatedGameEntity.obj
+         Release\Position3D.obj
          Release\Position2D.obj
          Release\Region.obj
          Release\Space.obj
@@ -12,6 +13,7 @@
          Release\Main.obj
          Release\Planet.obj
          Release\Ship.obj
+         Release\StaticGameEntity.obj
          Release\StaticResources.obj
          Release\CIndieLib.obj
          Generating code
@@ -21,4 +23,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.03
+Time Elapsed 00:00:05.33

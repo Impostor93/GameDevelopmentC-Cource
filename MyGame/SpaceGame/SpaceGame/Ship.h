@@ -2,9 +2,9 @@
 #ifndef SHIP
 #define SHIP
 
-#include "GameEntity.h"
+#include "StaticGameEntity.h"
 
-class Ship: public GameEntity
+class Ship : public StaticGameEntity
 {
 public:
 	Ship(CIndieLib* masterInstance, Position3D position, const char* path);
