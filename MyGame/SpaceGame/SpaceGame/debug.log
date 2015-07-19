@@ -15,23 +15,23 @@ Indielib version: 0.5.1
 
 [Init time]: (Sunday, 19 of July 2015)
 
-[18:53:55] [ BEGIN ] -- Creating Render --
+[21:08:39] [ BEGIN ] -- Creating Render --
                      {
-[18:53:55] [ BEGIN ]    -- Creating SDL window --
+[21:08:39] [ BEGIN ]    -- Creating SDL window --
                         {
            [  OK   ]       Window created
            [ INFO  ]       Mode: Window
                         }
-[18:53:56] [  END  ]    Window OK [Elapsed time = 0.057 seg]
-[18:53:56] [ BEGIN ]    -- Initializing Direct3D --
+[21:08:39] [  END  ]    Window OK [Elapsed time = 0.035 seg]
+[21:08:39] [ BEGIN ]    -- Initializing Direct3D --
                         {
            [  OK   ]       Creating D3D object
            [  OK   ]       Obtaining the adapter
            [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
            [ INFO  ]       Video mode: 800 x 600 x 32
                         }
-[18:53:56] [  END  ]    Direct3D OK [Elapsed time = 0.335 seg]
-[18:53:56] [ BEGIN ]    -- Hardware information --
+[21:08:39] [  END  ]    Direct3D OK [Elapsed time = 0.251 seg]
+[21:08:39] [ BEGIN ]    -- Hardware information --
                         {
            [ INFO  ]       Direct3D version: DXSDK November 2007
            [ INFO  ]       Mark: ?
@@ -41,479 +41,404 @@ Indielib version: 0.5.1
            [ INFO  ]       Vertex Shader: 3 . 0 
            [ INFO  ]       Pixel Shader: 3 . 0
                         }
-[18:53:56] [  END  ]    Hardware Ok [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Initializing ImageManager --
+[21:08:39] [  END  ]    Hardware Ok [Elapsed time = 0.001 seg]
+[21:08:39] [ BEGIN ]    -- Initializing ImageManager --
                         {
            [  OK   ]       Preparing ImageManager
            [ INFO  ]       Using FreeImage version:  3.15.3
            [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
                         }
-[18:53:56] [  END  ]    ImageManager Initialised [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Initializing SurfaceManager --
+[21:08:39] [  END  ]    ImageManager Initialised [Elapsed time = 0 seg]
+[21:08:39] [ BEGIN ]    -- Initializing SurfaceManager --
                         {
            [  OK   ]       Checking IND_Render
            [  OK   ]       Checking IND_ImageManager
                         }
-[18:53:56] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Initializing AnimationManager --
+[21:08:39] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
+[21:08:39] [ BEGIN ]    -- Initializing AnimationManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[18:53:56] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Initializing FontManager --
+[21:08:39] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[21:08:39] [ BEGIN ]    -- Initializing FontManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[18:53:56] [  END  ]    FontManager OK [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Initializing Entity2dManager --
+[21:08:39] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[21:08:39] [ BEGIN ]    -- Initializing Entity2dManager --
                         {
            [  OK   ]       Preparing Entity2dManager
            [  OK   ]        Checking IND_Render
                         }
-[18:53:56] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Adding 2d entity --
+[21:08:39] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[21:08:39] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 0
                         }
-[18:53:56] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Parsing and loading animation --
+[21:08:39] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[21:08:39] [ BEGIN ]    -- Parsing and loading animation --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo.xml
-[18:53:56] [ BEGIN ]       -- Loading Image --
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion.xml
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0000.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/1.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:39] [  END  ]       Image loaded [Elapsed time = 0.03 seg]
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0001.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/2.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:39] [  END  ]       Image loaded [Elapsed time = 0.03 seg]
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0002.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/3.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:39] [  END  ]       Image loaded [Elapsed time = 0.03 seg]
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0003.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/4.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:39] [  END  ]       Image loaded [Elapsed time = 0.034 seg]
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0004.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/5.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:39] [  END  ]       Image loaded [Elapsed time = 0.039 seg]
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0005.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/6.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:39] [  END  ]       Image loaded [Elapsed time = 0.049 seg]
+[21:08:39] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0006.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/7.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.066 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0007.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/8.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.067 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0008.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/9.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.062 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0009.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/10.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.065 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0010.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/11.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.065 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0011.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/12.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.063 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0012.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/13.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.058 seg]
+[21:08:40] [ BEGIN ]       -- Loading Image --
                            {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0013.png
+           [ INFO  ]          File name: ../SpaceGame/resources/animations/Ship_Explotion/14.png
            [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
+           [ INFO  ]          Size: 600 x 1200
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0014.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
-           [ INFO  ]          Bpp: 4
-           [ INFO  ]          Format: IND_RGBA
-                           }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0015.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
-           [ INFO  ]          Bpp: 4
-           [ INFO  ]          Format: IND_RGBA
-                           }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]       -- Loading Image --
-                           {
-           [ INFO  ]          File name: ../SpaceGame/resources/animations/ufo/renders_ovni0016.png
-           [ INFO  ]          Extension: png
-           [ INFO  ]          Size: 64 x 64
-           [ INFO  ]          Bpp: 4
-           [ INFO  ]          Format: IND_RGBA
-                           }
-[18:53:56] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[21:08:40] [  END  ]       Image loaded [Elapsed time = 0.055 seg]
                         }
-[18:53:56] [  END  ]    Animation parsed and loaded [Elapsed time = 0.032 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Animation parsed and loaded [Elapsed time = 0.715 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0000.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/1.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.02 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0000.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/1.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0001.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/2.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.022 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0001.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/2.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0002.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/3.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.02 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0002.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/3.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0003.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/4.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.022 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0003.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/4.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0004.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/5.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.02 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0004.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/5.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0005.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/6.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.021 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0005.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/6.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.002 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0006.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/7.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.023 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0006.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/7.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0007.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/8.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.021 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0007.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/8.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0008.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/9.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.018 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0008.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/9.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0009.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/10.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.02 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0009.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/10.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0010.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/11.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.019 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0010.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/11.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0011.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/12.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.018 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0011.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/12.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0012.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/13.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.022 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0012.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/13.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0013.png
+           [ INFO  ]       From image: ../SpaceGame/resources/animations/Ship_Explotion/14.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
+           [ INFO  ]       Image size: 600 x 1200
+           [ INFO  ]       Block size: 1024 x 2048
            [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
+           [ INFO  ]       Spare (Right | Down): 424 x 848
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:40] [  END  ]    Surface created [Elapsed time = 0.022 seg]
+[21:08:40] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0013.png
+           [ INFO  ]       File name: ../SpaceGame/resources/animations/Ship_Explotion/14.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0014.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
-                        }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0014.png
-                        }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0015.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
-                        }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0015.png
-                        }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/animations/ufo/renders_ovni0016.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 64 x 64
-           [ INFO  ]       Block size: 64 x 64
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 0 x 0
-                        }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/animations/ufo/renders_ovni0016.png
-                        }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Adding 2d entity --
+[21:08:40] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[21:08:40] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 1
                         }
-[18:53:56] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Loading Image --
+[21:08:40] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[21:08:40] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/hubble-space-wallpapers.png
            [ INFO  ]       Extension: png
@@ -521,8 +446,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 3
            [ INFO  ]       Format: IND_RGB
                         }
-[18:53:56] [  END  ]    Image loaded [Elapsed time = 0.138 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
+[21:08:41] [  END  ]    Image loaded [Elapsed time = 0.235 seg]
+[21:08:41] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/hubble-space-wallpapers.png
            [  OK   ]       Image type converted to 32-bit RGB implicitly.
@@ -533,197 +458,122 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 1536 x 448
                         }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.074 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
+[21:08:41] [  END  ]    Surface created [Elapsed time = 0.151 seg]
+[21:08:41] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/hubble-space-wallpapers.png
                         }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0.002 seg]
-[18:53:56] [ BEGIN ]    -- Adding 2d entity --
+[21:08:41] [  END  ]    Ok [Elapsed time = 0.004 seg]
+[21:08:44] [ BEGIN ]    -- Finalizing Entity2dManager --
                         {
-           [ INFO  ]       Name: 2
-                        }
-[18:53:56] [  END  ]    2d entity added [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Loading Image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/a4203_planetes_g.png
-           [ INFO  ]       Extension: png
-           [ INFO  ]       Size: 614 x 599
-           [ INFO  ]       Bpp: 3
-           [ INFO  ]       Format: IND_RGB
-                        }
-[18:53:56] [  END  ]    Image loaded [Elapsed time = 0.013 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/a4203_planetes_g.png
-           [  OK   ]       Image type converted to 32-bit RGB implicitly.
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 614 x 599
-           [ INFO  ]       Block size: 1024 x 1024
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 410 x 425
-                        }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.009 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/a4203_planetes_g.png
-                        }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Adding 2d entity --
-                        {
-           [ INFO  ]       Name: 3
-                        }
-[18:53:56] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[18:53:56] [ BEGIN ]    -- Loading Image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/rocket.png
-           [ INFO  ]       Extension: png
-           [ INFO  ]       Size: 353 x 253
-           [ INFO  ]       Bpp: 4
-           [ INFO  ]       Format: IND_RGBA
-                        }
-[18:53:56] [  END  ]    Image loaded [Elapsed time = 0.009 seg]
-[18:53:56] [ BEGIN ]    -- Creating surface --
-                        {
-           [ INFO  ]       From image: ../SpaceGame/resources/rocket.png
-           [ INFO  ]       Type: IND_ALPHA
-           [ INFO  ]       Quality: IND_32
-           [ INFO  ]       Image size: 353 x 253
-           [ INFO  ]       Block size: 512 x 256
-           [ INFO  ]       Number of blocks: 1 x 1
-           [ INFO  ]       Spare (Right | Down): 159 x 3
-                        }
-[18:53:56] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[18:53:56] [ BEGIN ]    -- Freeing image --
-                        {
-           [ INFO  ]       File name: ../SpaceGame/resources/rocket.png
-                        }
-[18:53:56] [  END  ]    Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]    -- Finalizing Entity2dManager --
-                        {
-[18:54:02] [ BEGIN ]       -- Freeing 2d entities --
+[21:08:44] [ BEGIN ]       -- Freeing 2d entities --
                            {
-           [ INFO  ]          Freeing 2d entity: 0
-           [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
                            }
-[18:54:02] [  END  ]       Entities freed [Elapsed time = 0.001 seg]
+[21:08:44] [  END  ]       Entities freed [Elapsed time = 0 seg]
                         }
-[18:54:02] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]    -- Finalizing FontManager --
+[21:08:44] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0.001 seg]
+[21:08:44] [ BEGIN ]    -- Finalizing FontManager --
                         {
-[18:54:02] [ BEGIN ]       -- Freeing fonts --
+[21:08:44] [ BEGIN ]       -- Freeing fonts --
                            {
                            }
-[18:54:02] [  END  ]       Fonts freed [Elapsed time = 0 seg]
+[21:08:44] [  END  ]       Fonts freed [Elapsed time = 0 seg]
                         }
-[18:54:02] [  END  ]    FontManager finalized [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]    -- Finalizing AnimationManager --
+[21:08:44] [  END  ]    FontManager finalized [Elapsed time = 0.001 seg]
+[21:08:44] [ BEGIN ]    -- Finalizing AnimationManager --
                         {
-[18:54:02] [ BEGIN ]       -- Freeing animations --
+[21:08:44] [ BEGIN ]       -- Freeing animations --
                            {
-[18:54:02] [ BEGIN ]          -- Freeing animation --
+[21:08:44] [ BEGIN ]          -- Freeing animation --
                               {
-           [ INFO  ]             Name: ../SpaceGame/resources/animations/ufo.xml
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+           [ INFO  ]             Name: ../SpaceGame/resources/animations/Ship_Explotion.xml
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.002 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.004 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.004 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.004 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.004 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.004 seg]
+[21:08:44] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]             -- Freeing surface --
-                                 {
-                                 }
-[18:54:02] [  END  ]             Ok [Elapsed time = 0 seg]
+[21:08:44] [  END  ]             Ok [Elapsed time = 0.003 seg]
                               }
-[18:54:02] [  END  ]          Ok [Elapsed time = 0.011 seg]
+[21:08:44] [  END  ]          Ok [Elapsed time = 0.045 seg]
                            }
-[18:54:02] [  END  ]       Animations freed [Elapsed time = 0.012 seg]
+[21:08:44] [  END  ]       Animations freed [Elapsed time = 0.046 seg]
                         }
-[18:54:02] [  END  ]    AnimationManager finalized [Elapsed time = 0.012 seg]
-[18:54:02] [ BEGIN ]    -- Finalizing SurfaceManager --
+[21:08:44] [  END  ]    AnimationManager finalized [Elapsed time = 0.046 seg]
+[21:08:44] [ BEGIN ]    -- Finalizing SurfaceManager --
                         {
-[18:54:02] [ BEGIN ]       -- Freeing surfaces --
+[21:08:44] [ BEGIN ]       -- Freeing surfaces --
                            {
-           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:                           }
-[18:54:02] [  END  ]       Surfaces freed [Elapsed time = 0.009 seg]
+           [ INFO  ]          Freeing surface:                           }
+[21:08:44] [  END  ]       Surfaces freed [Elapsed time = 0.009 seg]
                         }
-[18:54:02] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.009 seg]
-[18:54:02] [ BEGIN ]    -- Finalizing ImageManager --
+[21:08:44] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.009 seg]
+[21:08:44] [ BEGIN ]    -- Finalizing ImageManager --
                         {
-[18:54:02] [ BEGIN ]       -- Freeing images --
+[21:08:44] [ BEGIN ]       -- Freeing images --
                            {
                            }
-[18:54:02] [  END  ]       Images freed [Elapsed time = 0 seg]
+[21:08:44] [  END  ]       Images freed [Elapsed time = 0 seg]
                         }
-[18:54:02] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
-[18:54:02] [ BEGIN ]    -- Finalizing Direct3D --
+[21:08:44] [  END  ]    ImageManager finalized [Elapsed time = 0.001 seg]
+[21:08:44] [ BEGIN ]    -- Finalizing Direct3D --
                         {
            [  OK   ]       Finalizing the Device
            [  OK   ]       Finalizing D3D object
-[18:54:02] [ BEGIN ]       -- Finalizing the window --
+[21:08:44] [ BEGIN ]       -- Finalizing the window --
                            {
                            }
-[18:54:02] [  END  ]       Window finalized [Elapsed time = 0.006 seg]
+[21:08:44] [  END  ]       Window finalized [Elapsed time = 0.013 seg]
                         }
-[18:54:02] [  END  ]    Direct3D finalized  [Elapsed time = 0.062 seg]
+[21:08:44] [  END  ]    Direct3D finalized  [Elapsed time = 0.089 seg]

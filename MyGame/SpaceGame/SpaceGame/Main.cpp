@@ -128,27 +128,25 @@ int IndieLib()
 	CIndieLib *mI = CIndieLib::instance();
 	if (!mI->init()) return 0;
 
-	AnimatedGameEntity* ufo = new AnimatedGameEntity(mI, Position3D(200, 200, 1), "../SpaceGame/resources/animations/ufo.xml");
-	ufo->Draw();
+	AnimatedGameEntity* shipExplotion = new AnimatedGameEntity(mI, Position3D(0, 0, 1), "../SpaceGame/resources/animations/Ship_Explotion.xml");
+	shipExplotion->Draw();
 
-	//ufo->getINDIEntity()->setSequence(0);
-	ufo->getINDIEntity()->setNumReplays(1);
-	std::cout<< ufo->getINDIEntity()->getNumLines();
-
+	//mDelta = mI->_render->getFrameTime() / 1000.0f;
+	
 	//ufo->setSequence(0);
 
 	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/hubble-space-wallpapers.png");
 	space->Draw();
 
-	GameEntity* planet1 = new Planet(mI, Position3D(0, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
-	planet1->DrawRegion(new Region(100, 220, 140, 150));
+	//GameEntity* planet1 = new Planet(mI, Position3D(0, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
+	//planet1->DrawRegion(new Region(100, 220, 140, 150));
 
 	//GameEntity* planet2 = new Planet(mI, Position3D(300, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
 	//planet1->setPosition(Position3D(300, 0, 1));
 	//planet1->DrawRegion(new Region(100, 220, 140, 150));
 
-	GameEntity* ship = new Ship(mI, Position3D(300, 200, 1), "../SpaceGame/resources/rocket.png");
-	ship->Draw();
+	//GameEntity* ship = new Ship(mI, Position3D(300, 200, 1), "../SpaceGame/resources/rocket.png");
+	//ship->Draw();
 
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
