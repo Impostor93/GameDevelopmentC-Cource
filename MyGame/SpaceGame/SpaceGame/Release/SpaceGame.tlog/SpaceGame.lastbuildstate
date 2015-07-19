@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+<<<<<<< HEAD
 Release|Win32|D:\My Stuff\Materials\GameDev\GameDev\C-game-homework\GameDevelopmentC-Cource\MyGame\SpaceGame\|
+=======
+Release|Win32|D:\Vs2012 Project\C++ game development course\GameProject\MyGame\SpaceGame\|
+>>>>>>> 4819329beea771722e09e466edd360c8f13e1970

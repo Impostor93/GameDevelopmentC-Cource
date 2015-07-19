@@ -135,7 +135,11 @@ int IndieLib()
 	
 	//ufo->setSequence(0);
 
+<<<<<<< HEAD
 	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/galaxy.jpg");
+=======
+	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/hubble-space-wallpapers.png");
+>>>>>>> 4819329beea771722e09e466edd360c8f13e1970
 	space->Draw();
 
 	//GameEntity* planet1 = new Planet(mI, Position3D(0, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
