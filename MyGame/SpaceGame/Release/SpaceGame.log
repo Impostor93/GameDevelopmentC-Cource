@@ -1,9 +1,8 @@
-﻿Build started 20-Jul-15 23:46:38.
+﻿Build started 21-Jul-15 00:24:12.
      1>Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Visual Studio 2\VC\bin\CL.exe /c /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless" /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AnimatedGameEntity.cpp
          AnimatedGameEntity.cpp
-     1>AnimatedGameEntity.cpp(15): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Visual Studio 2\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\AnimatedGameEntity.obj
          Release\Position3D.obj
@@ -24,4 +23,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.87
+Time Elapsed 00:00:02.92

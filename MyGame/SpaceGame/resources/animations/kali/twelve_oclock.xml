@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+		<!-- frames declaration -->
+		<frames>	
+			<frame name="83" file="../SpaceGame/resources/animations/9oclock/83.png" />
+			<frame name="84" file="../SpaceGame/resources/animations/9oclock/84.png" />
+			<frame name="85" file="../SpaceGame/resources/animations/9oclock/85.png" />
+			<frame name="86" file="../SpaceGame/resources/animations/9oclock/86.png" />
+			<frame name="87" file="../SpaceGame/resources/animations/9oclock/87.png" />
+			<frame name="88" file="../SpaceGame/resources/animations/9oclock/88.png" />
+			<frame name="89" file="../SpaceGame/resources/animations/9oclock/89.png" />
+			<frame name="90" file="../SpaceGame/resources/animations/9oclock/90.png" />
+			<frame name="91" file="../SpaceGame/resources/animations/9oclock/91.png" />
+			<frame name="92" file="../SpaceGame/resources/animations/9oclock/92.png" />
+			<frame name="93" file="../SpaceGame/resources/animations/9oclock/93.png" />
+			<frame name="94" file="../SpaceGame/resources/animations/9oclock/94.png" />
+			<frame name="95" file="../SpaceGame/resources/animations/9oclock/95.png" />
+			<frame name="96" file="../SpaceGame/resources/animations/9oclock/96.png" />
+			<frame name="97" file="../SpaceGame/resources/animations/9oclock/97.png" />
+			<frame name="98" file="../SpaceGame/resources/animations/9oclock/98.png" />
+			<frame name="99" file="../SpaceGame/resources/animations/9oclock/99.png" />
+			<frame name="100" file="../SpaceGame/resources/animations/9oclock/100.png" />
+			<frame name="101" file="../SpaceGame/resources/animations/9oclock/101.png" />
+		</frames>
+		
+		<!-- sequences declaration -->
+		<sequences>
+			<sequence name="twelve_oclock">
+				<frame name="83" time="150" />
+				<frame name="84" time="150" />
+				<frame name="85" time="150" />
+				<frame name="86" time="150" />
+				<frame name="87" time="150" />
+				<frame name="88" time="150" />	
+				<frame name="89" time="150" />
+				<frame name="90" time="150" />
+				<frame name="91" time="150" />
+				<frame name="92" time="150" />
+				<frame name="93" time="150" />
+				<frame name="94" time="150" />	
+				<frame name="95" time="150" />
+				<frame name="96" time="150" />
+				<frame name="97" time="150" />
+				<frame name="98" time="150" />
+				<frame name="99" time="150" />
+				<frame name="100" time="150" />	
+				<frame name="101" time="150" />					
+			</sequence>
+		</sequences>
+</animation>

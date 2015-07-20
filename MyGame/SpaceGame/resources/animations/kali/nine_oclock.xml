@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+		<!-- frames declaration -->
+		<frames>	
+			<frame name="70" file="../SpaceGame/resources/animations/9oclock/70.png" />
+			<frame name="71" file="../SpaceGame/resources/animations/9oclock/71.png" />
+			<frame name="72" file="../SpaceGame/resources/animations/9oclock/72.png" />
+			<frame name="73" file="../SpaceGame/resources/animations/9oclock/73.png" />
+			<frame name="74" file="../SpaceGame/resources/animations/9oclock/74.png" />
+			<frame name="75" file="../SpaceGame/resources/animations/9oclock/75.png" />
+			<frame name="76" file="../SpaceGame/resources/animations/9oclock/76.png" />
+			<frame name="77" file="../SpaceGame/resources/animations/9oclock/77.png" />
+			<frame name="78" file="../SpaceGame/resources/animations/9oclock/78.png" />
+			<frame name="79" file="../SpaceGame/resources/animations/9oclock/79.png" />
+			<frame name="80" file="../SpaceGame/resources/animations/9oclock/80.png" />
+			<frame name="81" file="../SpaceGame/resources/animations/9oclock/81.png" />
+			<frame name="82" file="../SpaceGame/resources/animations/9oclock/82.png" />
+		</frames>
+		
+		<!-- sequences declaration -->
+		<sequences>
+			<sequence name="nine_oclock">
+				<frame name="70" time="150" />
+				<frame name="71" time="150" />
+				<frame name="72" time="150" />
+				<frame name="73" time="150" />
+				<frame name="74" time="150" />
+				<frame name="75" time="150" />	
+				<frame name="76" time="150" />
+				<frame name="77" time="150" />
+				<frame name="78" time="150" />
+				<frame name="79" time="150" />
+				<frame name="80" time="150" />
+				<frame name="81" time="150" />	
+				<frame name="82" time="150" />				
+			</sequence>
+		</sequences>
+</animation>
