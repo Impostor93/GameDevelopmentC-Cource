@@ -10,8 +10,8 @@ public:
 	
 	void Draw();
 	void Destroy();
-
 	void setSequence(int sequence);
+	void setNumReplays(int numreplays);
 
 private:
 	IND_Animation* _animation = 0;

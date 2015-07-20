@@ -12,7 +12,7 @@ void AnimatedGameEntity::Draw()
 {
 	getINDIEntity()->setAnimation(_animation);
 	getINDIEntity()->setScale(0.15f,0.15f);
-	getINDIEntity()->setPosition(340, 240, 5);//(getPosition().getX(), getPosition().getY(), getPosition().getZ());
+	getINDIEntity()->setPosition(getPosition().getX(), getPosition().getY(), getPosition().getZ());
 }
 
 void AnimatedGameEntity::Destroy()
@@ -24,6 +24,12 @@ void AnimatedGameEntity::setSequence(int sequence)
 {
 	if(getINDIEntity())
 		getINDIEntity()->setSequence(sequence);
+}
+
+void AnimatedGameEntity::setNumReplays(int numreplays)
+{
+	if (getINDIEntity())
+		getINDIEntity()->setNumReplays(numreplays);
 }
 
 AnimatedGameEntity::~AnimatedGameEntity()

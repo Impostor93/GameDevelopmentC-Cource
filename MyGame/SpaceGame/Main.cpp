@@ -1,4 +1,4 @@
-﻿//
+﻿ //
 ///*****************************************************************************************
 ///* Desc: Tutorial a) 04 IND_Animation
 ///*****************************************************************************************/
@@ -115,6 +115,7 @@
 #include "IND_Animation.h"
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"
+#include <IND_Sequence.h>
 
 /*
 ==================
@@ -128,8 +129,8 @@ int IndieLib()
 	CIndieLib *mI = CIndieLib::instance();
 	if (!mI->init()) return 0;
 
-	AnimatedGameEntity* shipExplotion = new AnimatedGameEntity(mI, Position3D(0, 0, 1), "../SpaceGame/resources/animations/Ship_Explotion.xml");
-	shipExplotion->Draw();
+	AnimatedGameEntity* ship = new AnimatedGameEntity(mI, Position3D(0, 0, 1), "../SpaceGame/resources/animations/Spaceship.xml");
+	ship->Draw();
 
 	//mDelta = mI->_render->getFrameTime() / 1000.0f;
 	
@@ -148,8 +149,25 @@ int IndieLib()
 	//GameEntity* ship = new Ship(mI, Position3D(300, 200, 1), "../SpaceGame/resources/rocket.png");
 	//ship->Draw();
 
-	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
+	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())  //idle
 	{
+		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
+		{
+			ship->setSequence(1);
+		}
+		if ((mI->_input->isKeyPressed(IND_KEYDOWN) && !mI->_input->quit())) //explosion 
+		{
+			ship->setSequence(2);
+			ship->setNumReplays(0);
+		}
+		if ((mI->_input->isKeyPressed(IND_KEYLEFT))) //left
+		{
+			ship->setSequence(3);
+		}
+		if ((mI->_input->isKeyPressed(IND_KEYRIGHT))) //right
+		{
+			ship->setSequence(4);
+		}
 		mI->_input->update();
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
