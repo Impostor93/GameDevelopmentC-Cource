@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+		<!-- frames declaration -->
+		<frames>	
+			<frame name="1" file="../SpaceGame/resources/animations/half-right-rotation/1.png" />
+			<frame name="2" file="../SpaceGame/resources/animations/half-right-rotation/2.png" />
+			<frame name="3" file="../SpaceGame/resources/animations/half-right-rotation/3.png" />
+			<frame name="4" file="../SpaceGame/resources/animations/half-right-rotation/4.png" />
+			<frame name="5" file="../SpaceGame/resources/animations/half-right-rotation/5.png" />
+			<frame name="6" file="../SpaceGame/resources/animations/half-right-rotation/6.png" />
+			<frame name="7" file="../SpaceGame/resources/animations/half-right-rotation/7.png" />
+			<frame name="8" file="../SpaceGame/resources/animations/half-right-rotation/8.png" />
+			<frame name="9" file="../SpaceGame/resources/animations/half-right-rotation/9.png" />
+			<frame name="10" file="../SpaceGame/resources/animations/half-right-rotation/10.png" />
+			<frame name="11" file="../SpaceGame/resources/animations/half-right-rotation/11.png" />
+			<frame name="12" file="../SpaceGame/resources/animations/half-right-rotation/12.png" />			
+			<frame name="13" file="../SpaceGame/resources/animations/half-right-rotation/13.png" />
+			<frame name="14" file="../SpaceGame/resources/animations/half-right-rotation/14.png" />
+			<frame name="15" file="../SpaceGame/resources/animations/half-right-rotation/15.png" />
+			<frame name="16" file="../SpaceGame/resources/animations/half-right-rotation/16.png" />
+			<frame name="17" file="../SpaceGame/resources/animations/half-right-rotation/17.png" />
+			<frame name="18" file="../SpaceGame/resources/animations/half-right-rotation/18.png" />
+			<frame name="19" file="../SpaceGame/resources/animations/half-right-rotation/19.png" />
+			<frame name="20" file="../SpaceGame/resources/animations/half-right-rotation/20.png" />
+		</frames>
+		
+		<!-- sequences declaration -->
+		<sequences>
+			<sequence name="three_oclock">
+				<frame name="1" time="150" />
+				<frame name="2" time="150" />
+				<frame name="3" time="150" />
+				<frame name="4" time="150" />
+				<frame name="5" time="150" />
+				<frame name="6" time="150" />	
+				<frame name="7" time="150" />
+				<frame name="8" time="150" />
+				<frame name="9" time="150" />
+				<frame name="10" time="150" />
+				<frame name="11" time="150" />
+				<frame name="12" time="150" />
+				<frame name="13" time="150" />
+				<frame name="14" time="150" />
+				<frame name="15" time="150" />				
+				<frame name="16" time="150" />				
+				<frame name="17" time="150" />
+				<frame name="18" time="150" />				
+				<frame name="19" time="150" />
+				<frame name="20" time="150" />						
+			</sequence>
+		</sequences>
+</animation>

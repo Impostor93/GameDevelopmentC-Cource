@@ -1,4 +1,4 @@
-﻿//
+﻿ //
 ///*****************************************************************************************
 ///* Desc: Tutorial a) 04 IND_Animation
 ///*****************************************************************************************/
@@ -115,6 +115,8 @@
 #include "IND_Animation.h"
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"
+#include "IND_Font.h"
+#include "../../WorkingPath.h"
 
 /*
 ==================
@@ -131,12 +133,40 @@ int IndieLib()
 	AnimatedGameEntity* shipExplotion = new AnimatedGameEntity(mI, Position3D(0, 0, 1), "../SpaceGame/resources/animations/Ship_Explotion.xml");
 	shipExplotion->Draw();
 
-	//mDelta = mI->_render->getFrameTime() / 1000.0f;
-	
-	//ufo->setSequence(0);
+	AnimatedGameEntity* shipRotate = new AnimatedGameEntity(mI, Position3D(0, 0, 0), "../SpaceGame/resources/animations/kali/three_oclock.xml");
+	shipExplotion->Draw();
 
-	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/galaxy.jpg");
+
+
+
+	//mDelta = mI->_render->getFrameTime() / 1000.0f;
+	IND_Surface *mSurfaceBeetleship = IND_Surface::newSurface();
+	if (!mI->_surfaceManager->add(mSurfaceBeetleship, "../../SpaceGame/resources/beetleship.png", IND_ALPHA, IND_32)) return 0;
+	//ufo->setSequence(0);
+	// Font
+	IND_Font *mFontSmall = IND_Font::newFont();
+	if (!mI->_fontManager->add(mFontSmall, "../../SpaceGame/resources/font_small.png", "../../resources/font_small.xml", IND_ALPHA, IND_32)) return 0;
+
+	// Creating 2d entity for the bettleship
+	IND_Entity2d *mBeetleship = IND_Entity2d::newEntity2d();
+	mI->_entity2dManager->add(mBeetleship);				// Entity adding
+	mBeetleship->setSurface(mSurfaceBeetleship);			// Set the surface into the entity
+	// ----- Font creation -----
+
+	IND_Entity2d *mTextSmallWhite = IND_Entity2d::newEntity2d();
+	mI->_entity2dManager->add(mTextSmallWhite);			// Entity adding
+	mTextSmallWhite->setFont(mFontSmall);				// Set the font into the entity
+	mTextSmallWhite->setLineSpacing(18);
+	mTextSmallWhite->setCharSpacing(-8);
+	mTextSmallWhite->setPosition(5, 5, 1);
+	mTextSmallWhite->setAlign(IND_LEFT);
+
+
+
+	mBeetleship->setHotSpot(0.5f, 0.5f);
+	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/planetki new/space.jpg");
 	space->Draw();
+
 
 	//GameEntity* planet1 = new Planet(mI, Position3D(0, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
 	//planet1->DrawRegion(new Region(100, 220, 140, 150));
@@ -148,8 +178,44 @@ int IndieLib()
 	//GameEntity* ship = new Ship(mI, Position3D(300, 200, 1), "../SpaceGame/resources/rocket.png");
 	//ship->Draw();
 
+
+
+	float mAngle = 0;
+	float mPos = 400;
+	int mSpeed = 200;
+	float mDelta;
+	char mText[2048];
+	mText[0] = 0;
+
+
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
+
+		strcat(mText, "Use left and right arrow keys for moving the ships\n");
+		strcat(mText, "Press CTRL + X or ESC key to quit");
+		mTextSmallWhite->setText(mText);
+		mDelta = mI->_render->getFrameTime() / 1000.0f;
+		// Move entities when pressing right
+		if (mI->_input->isKeyPressed(IND_KEYRIGHT)){
+			mPos += mSpeed * mDelta;
+		}
+
+		// Move entities when pressing left
+		if (mI->_input->isKeyPressed(IND_KEYLEFT)){
+			mPos -= mSpeed * mDelta;
+		}
+
+		// If CTRL + X pressed then exit
+		if (mI->_input->isKeyPressed(IND_LCTRL) && mI->_input->isKeyPressed(IND_X)){
+			mI->_render->endScene();
+			mI->end();
+			exit(0);
+		}
+
+		mAngle += (mSpeed / 4) * mDelta;
+		mBeetleship->setPosition((float)mPos, 140, 1);
+		mBeetleship->setAngleXYZ(0, 0, (float)mPos);
+
 		mI->_input->update();
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();

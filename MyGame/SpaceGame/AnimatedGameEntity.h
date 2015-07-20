@@ -10,6 +10,7 @@ public:
 	
 	void Draw();
 	void Destroy();
+	void Rotate();
 
 	void setSequence(int sequence);
 

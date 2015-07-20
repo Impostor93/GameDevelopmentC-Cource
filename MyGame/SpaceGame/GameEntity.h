@@ -27,6 +27,8 @@ public:
 
 	virtual void Destroy()=0;
 
+	virtual void Rotate() = 0;
+
 	Position3D getPosition();
 	void setPosition(Position3D position);
 

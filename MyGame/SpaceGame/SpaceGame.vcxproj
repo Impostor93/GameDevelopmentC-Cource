@@ -73,14 +73,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\My Stuff\Materials\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless;D:\My Stuff\Materials\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\kalina\Desktop\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless;C:\Users\kalina\Desktop\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>D:\My Stuff\Materials\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\kalina\Desktop\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

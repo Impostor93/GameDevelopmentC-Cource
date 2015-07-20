@@ -20,6 +20,12 @@ void AnimatedGameEntity::Destroy()
 
 }
 
+void AnimatedGameEntity::Rotate()
+{
+
+}
+
+
 void AnimatedGameEntity::setSequence(int sequence)
 {
 	if(getINDIEntity())

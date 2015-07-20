@@ -23,5 +23,6 @@ public:
 
 	void Destroy();
 	void Draw();
+	void Rotate();
 };
 #endif

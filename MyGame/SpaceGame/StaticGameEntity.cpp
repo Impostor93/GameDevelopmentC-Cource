@@ -22,7 +22,13 @@ void StaticGameEntity::Destroy()
 		getINDIEntity()->destroy();
 	}
 }
+void StaticGameEntity::Rotate()
+{
+	
+	
 
+
+}
 StaticGameEntity::~StaticGameEntity()
 {
 	_surface = 0;

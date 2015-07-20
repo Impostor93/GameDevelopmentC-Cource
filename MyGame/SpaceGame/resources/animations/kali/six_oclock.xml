@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+		<!-- frames declaration -->
+		<frames>
+			<frame name="21" file="../SpaceGame/resources/animations/half-right-rotation/21.png" />
+			<frame name="22" file="../SpaceGame/resources/animations/half-right-rotation/22.png" />
+			<frame name="23" file="../SpaceGame/resources/animations/half-right-rotation/23.png" />
+			<frame name="24" file="../SpaceGame/resources/animations/half-right-rotation/24.png" />
+			<frame name="25" file="../SpaceGame/resources/animations/half-right-rotation/25.png" />
+			<frame name="26" file="../SpaceGame/resources/animations/half-right-rotation/26.png" />
+			<frame name="27" file="../SpaceGame/resources/animations/half-right-rotation/27.png" />
+			<frame name="28" file="../SpaceGame/resources/animations/half-right-rotation/28.png" />
+			<frame name="29" file="../SpaceGame/resources/animations/half-right-rotation/29.png" />
+			<frame name="30" file="../SpaceGame/resources/animations/half-right-rotation/30.png" />
+			<frame name="31" file="../SpaceGame/resources/animations/half-right-rotation/31.png" />
+			<frame name="32" file="../SpaceGame/resources/animations/half-right-rotation/32.png" />
+		</frames>
+		
+		<!-- sequences declaration -->
+		<sequences>
+			<sequence name="six_oclock">
+				<frame name="21" time="150" />
+				<frame name="22" time="150" />
+				<frame name="23" time="150" />
+				<frame name="24" time="150" />
+				<frame name="25" time="150" />
+				<frame name="26" time="150" />				
+				<frame name="27" time="150" />				
+				<frame name="28" time="150" />
+				<frame name="29" time="150" />				
+				<frame name="30" time="150" />
+				<frame name="31" time="150" />	
+				<frame name="32" time="150" />					
+			</sequence>
+		</sequences>
+</animation>
