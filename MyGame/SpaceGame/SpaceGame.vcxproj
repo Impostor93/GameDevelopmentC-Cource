@@ -88,6 +88,7 @@
     <ClCompile Include="Position3D.cpp" />
     <ClCompile Include="Position2D.cpp" />
     <ClCompile Include="Region.cpp" />
+    <ClCompile Include="Settings.cpp" />
     <ClCompile Include="Space.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -102,6 +103,7 @@
     <ClInclude Include="Position3D.h" />
     <ClInclude Include="Position2D.h" />
     <ClInclude Include="Region.h" />
+    <ClInclude Include="Settings.h" />
     <ClInclude Include="Space.h" />
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="Planet.h" />

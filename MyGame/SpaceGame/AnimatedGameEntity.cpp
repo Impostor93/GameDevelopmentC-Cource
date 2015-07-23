@@ -9,10 +9,12 @@ AnimatedGameEntity::AnimatedGameEntity(CIndieLib* masterInstance, Position3D pos
 }
 
 void AnimatedGameEntity::Draw()
-{
+{	
+	float mPosX = 350;
+	float mPosY = 250;
 	getINDIEntity()->setAnimation(_animation);
 	getINDIEntity()->setScale(0.15f,0.15f);
-	getINDIEntity()->setPosition(350, 250, 5);//(getPosition().getX(), getPosition().getY(), getPosition().getZ());
+	getINDIEntity()->setPosition((float)mPosX, (float)mPosY, 5);//(getPosition().getX(), getPosition().getY(), getPosition().getZ());
 }
 
 void AnimatedGameEntity::Destroy()
@@ -30,6 +32,18 @@ void AnimatedGameEntity::setNumReplays(int numreplays)
 {
 	if (getINDIEntity())
 		getINDIEntity()->setNumReplays(numreplays);
+}
+
+void AnimatedGameEntity::setAngleXYZ(float x, float y, float z)
+{
+	if (getINDIEntity())
+		getINDIEntity()->setAngleXYZ(x, y, z);
+}
+
+void AnimatedGameEntity::setPosition(float x, float y, float z)
+{
+	if (getINDIEntity())
+		getINDIEntity()->setPosition(x, y, z);
 }
 
 AnimatedGameEntity::~AnimatedGameEntity()

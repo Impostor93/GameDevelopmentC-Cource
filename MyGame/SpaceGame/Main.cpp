@@ -1,4 +1,4 @@
-﻿ //
+﻿//
 ///*****************************************************************************************
 ///* Desc: Tutorial a) 04 IND_Animation
 ///*****************************************************************************************/
@@ -116,6 +116,12 @@
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"
 #include <IND_Sequence.h>
+#include <map>
+#include <fstream>
+#include <string>
+#include "Settings.h"
+
+using namespace std;
 
 /*
 ==================
@@ -129,15 +135,15 @@ int IndieLib()
 	CIndieLib *mI = CIndieLib::instance();
 	if (!mI->init()) return 0;
 
+	/*Settings* settings = new Settings(mI, "../SpaceGame/Config/controls.txt");
+	settings->loadSettings;*/
+
 	AnimatedGameEntity* ship = new AnimatedGameEntity(mI, Position3D(0, 0, 1), "../SpaceGame/resources/animations/Spaceship.xml");
 	ship->Draw();
 
-	//mDelta = mI->_render->getFrameTime() / 1000.0f;
-	
-	//ufo->setSequence(0);
-
 	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/galaxy.jpg");
 	space->Draw();
+
 
 	//GameEntity* planet1 = new Planet(mI, Position3D(0, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
 	//planet1->DrawRegion(new Region(100, 220, 140, 150));
@@ -149,26 +155,39 @@ int IndieLib()
 	//GameEntity* ship = new Ship(mI, Position3D(300, 200, 1), "../SpaceGame/resources/rocket.png");
 	//ship->Draw();
 
+	float mAngle = 0;
+	float mPosX = 350;
+	float mPosY = 250;
+	int mSpeed = 200;
+	float mDelta;
+
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())  //idle
 	{
+		mI->_input->update();
+		mDelta = mI->_render->getFrameTime() / 1000.0f;
 		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
 		{
 			ship->setSequence(1);
+			ship->setPosition(350, float(mPosY), 5);
+			mPosY -= mSpeed * mDelta;
 		}
-		if ((mI->_input->isKeyPressed(IND_KEYDOWN) && !mI->_input->quit())) //explosion 
+		if ((mI->_input->isKeyPressed(IND_KEYDOWN))) //explosion 
 		{
 			ship->setSequence(2);
-			ship->setNumReplays(0);
+			mI->_render->endScene();
+			mI->end();
+			exit(0);
 		}
 		if ((mI->_input->isKeyPressed(IND_KEYLEFT))) //left
 		{
-			ship->setSequence(3);
+			mPosX += mSpeed * mDelta;
+			ship->setAngleXYZ(0, 0, (float)mPosX);
 		}
 		if ((mI->_input->isKeyPressed(IND_KEYRIGHT))) //right
 		{
-			ship->setSequence(4);
+			mPosX -= mSpeed * mDelta;
+			ship->setAngleXYZ(0, 0, (float)mPosX);
 		}
-		mI->_input->update();
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
 		mI->_render->endScene();
