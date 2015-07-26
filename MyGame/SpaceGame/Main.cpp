@@ -116,9 +116,6 @@
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"
 #include <IND_Sequence.h>
-#include <map>
-#include <fstream>
-#include <string>
 #include "Settings.h"
 
 using namespace std;
@@ -128,6 +125,19 @@ using namespace std;
 Main
 ==================
 */
+map<string, string> settings_;
+Settings* st = new Settings(settings_);
+void updateInput(CIndieLib* mI, AnimatedGameEntity *ship)
+{
+	if (mI->_input->onKeyPress(IND_K))
+	{
+		st->loadSettings("../SpaceGame/Config/settings.txt");
+		float x = stof(settings_["s_X"]);
+		float y = stof(settings_["s_Y"]);
+		ship->setPosition(x, y, 5);
+	}
+}
+
 int IndieLib()
 {
 	//Sets the working path as the 'exe' directory. All resource paths are relative to this directory
@@ -135,15 +145,11 @@ int IndieLib()
 	CIndieLib *mI = CIndieLib::instance();
 	if (!mI->init()) return 0;
 
-	/*Settings* settings = new Settings(mI, "../SpaceGame/Config/controls.txt");
-	settings->loadSettings;*/
-
 	AnimatedGameEntity* ship = new AnimatedGameEntity(mI, Position3D(0, 0, 1), "../SpaceGame/resources/animations/Spaceship.xml");
 	ship->Draw();
 
 	GameEntity* space = new Space(mI, Position3D(0, 0, 0), "../SpaceGame/resources/galaxy.jpg");
 	space->Draw();
-
 
 	//GameEntity* planet1 = new Planet(mI, Position3D(0, 0, 1), "../SpaceGame/resources/a4203_planetes_g.png");
 	//planet1->DrawRegion(new Region(100, 220, 140, 150));
@@ -159,19 +165,14 @@ int IndieLib()
 	float mPosX = 350;
 	float mPosY = 250;
 	int mSpeed = 200;
-	float mDelta;
+	float mDelta; // double
 
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())  //idle
 	{
+		updateInput(mI, ship);
 		mI->_input->update();
 		mDelta = mI->_render->getFrameTime() / 1000.0f;
-		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
-		{
-			ship->setSequence(1);
-			ship->setPosition(350, float(mPosY), 5);
-			mPosY -= mSpeed * mDelta;
-		}
-		if ((mI->_input->isKeyPressed(IND_KEYDOWN))) //explosion 
+		if ((mI->_input->isKeyPressed(IND_D))) //explosion 
 		{
 			ship->setSequence(2);
 			mI->_render->endScene();
@@ -187,6 +188,18 @@ int IndieLib()
 		{
 			mPosX -= mSpeed * mDelta;
 			ship->setAngleXYZ(0, 0, (float)mPosX);
+		}
+		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
+		{
+			ship->setSequence(1);
+			ship->setPosition(350, (float)mPosY, 5);
+			mPosY -= mSpeed * mDelta;
+		}
+		if ((mI->_input->isKeyPressed(IND_KEYDOWN))) //flyingbackwards
+		{
+			ship->setSequence(1);
+			ship->setPosition(350, (float)mPosY, 5); //
+			mPosY += mSpeed * mDelta;
 		}
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();

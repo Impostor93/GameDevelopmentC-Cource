@@ -1,18 +1,14 @@
-#include <map>
-#include <fstream>
-#include <string>
-#include "CIndieLib.h"
-#include "IND_Surface.h"
-#include "IND_Entity2d.h"
 #include "Settings.h"
 
-using namespace std;
-
-/*Settings::Settings(CIndieLib* masterInstance, const char* resourcePath)
+Settings::Settings(map<string, string> Mysettings)
 {
+	settings_.insert(Mysettings.begin(), Mysettings.end());
 }
-/
-void trimspaces(string& value)
+Settings::~Settings()
+{
+
+}
+void Settings::trimspaces(string& value)
 {
 	char const* delims = " \t\r\n";					// set the type of characters that should be removed from the string
 	size_t pos = value.find_first_not_of(delims);	// find the position of the first character that is not a delimeter 
@@ -21,7 +17,7 @@ void trimspaces(string& value)
 	value.erase(pos + 1);							// remove all characters after the position specified
 }
 
-void loadSettings(const std::string& filename)
+void  Settings::loadSettings(const string& filename)
 {
 	settings_.clear();								// first clear the existing settings
 	ifstream settingsfile(filename.c_str());		// create an input stream
@@ -40,5 +36,3 @@ void loadSettings(const std::string& filename)
 	}
 	settingsfile.close();							// finally, close the input stream
 }
-*/
-
