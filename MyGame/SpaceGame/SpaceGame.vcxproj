@@ -100,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimatedGameEntity.h" />
+    <ClInclude Include="common\include\irrKlang.h" />
     <ClInclude Include="Position3D.h" />
     <ClInclude Include="Position2D.h" />
     <ClInclude Include="Region.h" />
