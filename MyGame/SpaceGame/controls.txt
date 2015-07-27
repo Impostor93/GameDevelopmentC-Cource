@@ -1,0 +1,4 @@
+[keyUp] = [IND_KEYUP]
+[keyLeft] = [IND_KEYLEFT]
+[keyRight] = [IND_KEYRIGHT]
+[keyEscape] = [IND_ESCAPE]
