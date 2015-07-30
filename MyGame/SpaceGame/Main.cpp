@@ -180,12 +180,22 @@ int IndieLib()
 	float mPosY = 250;
 	int mSpeed = 200;
 	float mDelta; // double
-
+	
+	float mWidth = ship->getINDIEntity()->getRegionWidth() / 2;
+	float mHeight = ship->getINDIEntity()->getRegionHeight()/ 2;
+	ship->getINDIEntity()->setHotSpot(0.5f, 0.5f);
+	
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())  //idle
 	{
 		updateInput(mI, ship);
 		mI->_input->update();
 		mDelta = mI->_render->getFrameTime() / 1000.0f;
+		
+		if (mPosX + mWidth >= mI->_window-> getWidth()) mPosX = mI->_window->getWidth();
+		if (mPosX - mWidth< 0) mPosX = 0;
+		if (mPosY + mHeight >= mI->_window->getHeight()) mPosY = mI->_window->getHeight();
+		if (mPosY - mHeight < 0) mPosY = 0;
+		
 		if ((mI->_input->isKeyPressed(IND_D))) //explosion 
 		{
 			ship->setSequence(2);
