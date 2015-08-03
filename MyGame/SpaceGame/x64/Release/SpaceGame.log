@@ -1,0 +1,41 @@
+﻿Build started 28-Jul-15 20:08:10.
+     1>Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Visual Studio 2\VC\bin\x86_amd64\CL.exe /c /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless" /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt AnimatedGameEntity.cpp Position3D.cpp Position2D.cpp Region.cpp Settings.cpp Space.cpp GameEntity.cpp Main.cpp Planet.cpp Ship.cpp StaticGameEntity.cpp StaticResources.cpp tools\editor_tileless\CIndieLib.cpp
+         AnimatedGameEntity.cpp
+     1>D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include\IND_Animation.h(117): warning C4267: 'return' : conversion from 'size_t' to 'unsigned long', possible loss of data
+     1>AnimatedGameEntity.cpp(55): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Position3D.cpp
+         Position2D.cpp
+         Region.cpp
+         Settings.cpp
+         Space.cpp
+         GameEntity.cpp
+         Main.cpp
+     1>D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include\IND_Animation.h(117): warning C4267: 'return' : conversion from 'size_t' to 'unsigned long', possible loss of data
+         Planet.cpp
+         Ship.cpp
+         StaticGameEntity.cpp
+     1>StaticGameEntity.cpp(14): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         StaticResources.cpp
+         CIndieLib.cpp
+       Link:
+         C:\Program Files (x86)\Visual Studio 2\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\x64\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib irrKlang.lib IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\x64\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\x64\Release\SpaceGame.lib" /MACHINE:X64 x64\Release\AnimatedGameEntity.obj
+         x64\Release\Position3D.obj
+         x64\Release\Position2D.obj
+         x64\Release\Region.obj
+         x64\Release\Settings.obj
+         x64\Release\Space.obj
+         x64\Release\GameEntity.obj
+         x64\Release\Main.obj
+         x64\Release\Planet.obj
+         x64\Release\Ship.obj
+         x64\Release\StaticGameEntity.obj
+         x64\Release\StaticResources.obj
+         x64\Release\CIndieLib.obj
+     1>IndieLib.lib(IndieLib.dll) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'
+     1>Done Building Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:07.93

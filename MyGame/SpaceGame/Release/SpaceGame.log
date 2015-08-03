@@ -1,13 +1,25 @@
-﻿Build started 27-Jul-15 23:43:24.
+﻿Build started 04-Aug-15 00:47:30.
      1>Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Visual Studio 2\VC\bin\CL.exe /c /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless" /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
          Main.cpp
-     1>Main.cpp(218): warning C4102: 'irrklang' : unreferenced label
+     1>Main.cpp(66): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(67): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(75): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(77): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(85): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>Main.cpp(94): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>Main.cpp(106): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>Main.cpp(108): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(109): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(110): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>Main.cpp(122): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>Main.cpp(130): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
-         C:\Program Files (x86)\Visual Studio 2\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\AnimatedGameEntity.obj
+         C:\Program Files (x86)\Visual Studio 2\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib irrKlang.lib IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\AnimatedGameEntity.obj
          Release\Position3D.obj
          Release\Position2D.obj
+         Release\Projectile.obj
          Release\Region.obj
          Release\Settings.obj
          Release\Space.obj
@@ -25,4 +37,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.42
+Time Elapsed 00:00:02.12

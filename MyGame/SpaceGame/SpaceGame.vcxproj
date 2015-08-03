@@ -81,12 +81,14 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>D:\My Stuff\Studying\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>IndieLib.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimatedGameEntity.cpp" />
     <ClCompile Include="Position3D.cpp" />
     <ClCompile Include="Position2D.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="Region.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="Space.cpp" />
@@ -103,6 +105,7 @@
     <ClInclude Include="common\include\irrKlang.h" />
     <ClInclude Include="Position3D.h" />
     <ClInclude Include="Position2D.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="Region.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="Space.h" />
