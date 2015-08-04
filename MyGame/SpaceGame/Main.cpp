@@ -61,18 +61,12 @@ int IndieLib()
 	float mPosX = 350;
 	float mPosY = 250;
 	int mSpeed = 200;
-<<<<<<< HEAD
 	double mDelta;
-	
-	float mWidth = ship->getINDIEntity()->getRegionWidth() / 2;
-	float mHeight = ship->getINDIEntity()->getRegionHeight()/ 2;
-=======
-	float mDelta; // double
-	
+
 	float mWidth = ship->getINDIEntity()->getRegionWidth() / 2;
 	float mHeight = ship->getINDIEntity()->getRegionHeight()/ 2;
 	ship->getINDIEntity()->setHotSpot(0.5f, 0.5f);
->>>>>>> origin/master
+
 	
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())  //idle
 	{
@@ -85,11 +79,6 @@ int IndieLib()
 		if (mPosY + mHeight >= mI->_window->getHeight()) mPosY = mI->_window->getHeight();
 		if (mPosY - mHeight < 0) mPosY = 0;
 		
-<<<<<<< HEAD
-
-
-
-=======
 		if ((mI->_input->isKeyPressed(IND_D))) //explosion 
 		{
 			ship->setSequence(2);
@@ -97,7 +86,7 @@ int IndieLib()
 			mI->end();
 			exit(0);
 		}
->>>>>>> origin/master
+
 		if ((mI->_input->isKeyPressed(IND_KEYLEFT))) //left
 		{
 			mPosX -= mSpeed * mDelta;
@@ -121,11 +110,10 @@ int IndieLib()
 			ship->setSequence(1);
 			float angle = ship->getAngleZ()*PI/180.f;
 			float acc = 0.0f;
-			acc += 50.f * mDelta;
-			if (acc>100) acc=100;
-			ship->setPosition(ship->getPosX() + acc*sin(angle), ship->getPosY(), 0);
-			ship->setPosition(ship->getPosX(), ship->getPosY() - acc*cos(angle), 0);
-			mPosY -= mSpeed * mDelta;
+			acc += 300.f * mDelta;
+			if (acc>300) acc=300;
+			ship->setPosition(ship->getPosX() + acc*sin(angle), ship->getPosY() - acc*cos(angle), 0);
+			//mPosY -= mSpeed * mDelta;
 			//ship->accelerate(mSpeed*(mDelta));
 			/*sound->play2D("../SpaceGame/resources/sound/flight.mp3", true);*/
 		}
@@ -134,23 +122,20 @@ int IndieLib()
 
 		if ((mI->_input->isKeyPressed(IND_KEYDOWN))) //flyingbackwards
 		{
-			/*ship->setSequence(1);
-			ship->decelerate(mSpeed * (mDelta));*/
-			ship->setPosition(350, (float)mPosY, 5); //
-			mPosY += mSpeed * mDelta;
-			/*sound->play2D("../SpaceGame/resources/sound/flight.mp3", true);*/
+			///*ship->setSequence(1);
+			//ship->decelerate(mSpeed * (mDelta));*/
+			//ship->setPosition(350, (float)mPosY, 5); //
+			//mPosY += mSpeed * mDelta;
+			///*sound->play2D("../SpaceGame/resources/sound/flight.mp3", true);*/
 		}
 
 
 
 		if ((mI->_input->isKeyPressed(IND_SPACE)))
 		{
-			GameEntity* projectile = new StaticGameEntity(mI, Position3D(float(mPosX) + 10.0f, float(mPosY) + 10.0f, 5), "../SpaceGame/resources/Asteroids/1.png");
+			Projectile* projectile = new Projectile(mI, Position3D(mPosX + 10.0f, mPosY + 10.0f, 5), "../SpaceGame/resources/projectile.png");
 			projectile->Draw();
-
 		}
-
-
 
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();

@@ -18,6 +18,7 @@ void AnimatedGameEntity::Draw()
 	getINDIEntity()->setHotSpot(0.5f, 0.5f);
 	getINDIEntity()->setScale(0.15f,0.15f);
 	getINDIEntity()->setPosition((float)mPosX, (float)mPosY, 5);
+	//getINDIEntity()->setNumReplays(99);
 }
 
 

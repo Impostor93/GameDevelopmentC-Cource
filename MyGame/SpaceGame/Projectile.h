@@ -9,6 +9,7 @@ class Projectile : public StaticGameEntity
 public:
 	Projectile(CIndieLib* masterInstance, Position3D position, const char* path);
 	~Projectile();
+
 };
 
 #endif
