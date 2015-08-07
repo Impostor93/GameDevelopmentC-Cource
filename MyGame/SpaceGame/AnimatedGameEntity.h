@@ -14,13 +14,13 @@ public:
 	void setNumReplays(int numreplays);
 	void setAngleXYZ(float x, float y, float z);
 	void setPosition(float x, float y, float z);
-	int getPosX();
-	int getPosY();
+	float getPosX();
+	float getPosY();
 
 	float *accX = new float(0);
 	float *accY = new float(0);
 
-	int getAngleZ();
+	float getAngleZ();
 	void setSpeedX(float spX);
 	void setSpeedY(float spY);
 	void accelerate(float move);

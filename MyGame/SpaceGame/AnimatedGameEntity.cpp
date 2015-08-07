@@ -39,8 +39,8 @@ void AnimatedGameEntity::decelerate(float move)
 	*accY = *accY + cos(angle)*move;
 }
 
-int AnimatedGameEntity::getPosX(){ return getINDIEntity()->getPosX(); }
-int AnimatedGameEntity::getPosY(){ return getINDIEntity()->getPosY(); }
+float AnimatedGameEntity::getPosX(){ return getINDIEntity()->getPosX(); }
+float AnimatedGameEntity::getPosY(){ return getINDIEntity()->getPosY(); }
 
 void AnimatedGameEntity::Destroy()
 {
@@ -71,7 +71,7 @@ void AnimatedGameEntity::setPosition(float x, float y, float z)
 		getINDIEntity()->setPosition(x, y, z);
 }
 
-int AnimatedGameEntity::getAngleZ()
+float AnimatedGameEntity::getAngleZ()
 {
 	return getINDIEntity()->getAngleZ();
 }
