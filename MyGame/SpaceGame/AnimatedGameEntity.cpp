@@ -8,17 +8,16 @@ AnimatedGameEntity::AnimatedGameEntity(CIndieLib* masterInstance, Position3D pos
 	masterInstance->_animationManager->addToSurface(_animation, getResourcePath(), IND_ALPHA, IND_16);
 	*accX = 1.0f;
 	*accY = 1.0f;
+	float innitalPosX = 0;
+	float innitalPosY = 0;
+	getINDIEntity()->setPosition((float)innitalPosX, (float)innitalPosY, 5);
 }
 
 void AnimatedGameEntity::Draw()
 {	
-	float mPosX = 350;
-	float mPosY = 250;
 	getINDIEntity()->setAnimation(_animation);
 	getINDIEntity()->setHotSpot(0.5f, 0.5f);
-	getINDIEntity()->setScale(0.15f,0.15f);
-	getINDIEntity()->setPosition((float)mPosX, (float)mPosY, 5);
-	//getINDIEntity()->setNumReplays(99);
+	getINDIEntity()->setScale(0.32f,0.32f);
 }
 
 
