@@ -97,10 +97,10 @@ int IndieLib()
 		mPosX = ship->getPosX();
 		mPosY = ship->getPosY();
 
-		if (mPosX > 750) ship->setPosition(750, mPosY, 5);
-		if (mPosY > 550) ship->setPosition(mPosX, 550, 5);
-		if (mPosX < 50) ship->setPosition(50, mPosY, 5);
-		if (mPosY < 50) ship->setPosition(mPosX, 50, 5);
+		if (mPosX > 705) ship->setPosition(705, mPosY, 5);
+		if (mPosY > 505) ship->setPosition(mPosX, 505, 5);
+		if (mPosX < 95) ship->setPosition(95, mPosY, 5);
+		if (mPosY < 95) ship->setPosition(mPosX, 95, 5);
 
 
 		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
