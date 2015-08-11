@@ -102,6 +102,11 @@ int IndieLib()
 		if (mPosX < 75) ship->setPosition(75, mPosY, 5);
 		if (mPosY < 75) ship->setPosition(mPosX, 75, 5);
 
+		//if (mPosX > 705) ship->setPosition(705, mPosY, 5);
+		//if (mPosY > 505) ship->setPosition(mPosX, 505, 5);
+		//if (mPosX < 95) ship->setPosition(95, mPosY, 5);
+		//if (mPosY < 95) ship->setPosition(mPosX, 95, 5);
+
 
 		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
 		{
