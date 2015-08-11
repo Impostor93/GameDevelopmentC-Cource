@@ -97,10 +97,10 @@ int IndieLib()
 		mPosX = ship->getPosX();
 		mPosY = ship->getPosY();
 
-		if (mPosX > 750) ship->setPosition(750, mPosY, 5);
+		if (mPosX > 725) ship->setPosition(725, mPosY, 5);
 		if (mPosY > 550) ship->setPosition(mPosX, 550, 5);
-		if (mPosX < 50) ship->setPosition(50, mPosY, 5);
-		if (mPosY < 50) ship->setPosition(mPosX, 50, 5);
+		if (mPosX < 75) ship->setPosition(75, mPosY, 5);
+		if (mPosY < 75) ship->setPosition(mPosX, 75, 5);
 
 
 		if ((mI->_input->isKeyPressed(IND_KEYUP))) //flying
@@ -145,8 +145,17 @@ int IndieLib()
 			projectile->Draw();
 		}
 
-
 		enemy_ship->setPosition((float)mI->_input->getMouseX(), 50, 5);
+
+		if (mI->_input->getMouseX() < 10)
+		{
+			enemy_ship->setAngleXYZ(0, 0, (float)90);
+		}
+		else if (mI->_input->getMouseX() > 790)
+		{
+			enemy_ship->setAngleXYZ(0, 0,(float)-90);
+			enemy_ship->setPosition((float)mI->_input->getMouseX(), 50, 5);
+		}
 		mI->_input->update();
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
