@@ -12,6 +12,7 @@ void AnimatedGameEntity::draw()
 	getINDIEntity()->setAnimation(_animation);
 	getINDIEntity()->setScale(0.15f,0.15f);
 	getINDIEntity()->setPosition(getPosition().getX(), getPosition().getY(), getPosition().getZ());
+	getINDIEntity()->setAngleXYZ(getINDIEntity()->getAngleX(), getINDIEntity()->getAngleY(), _angleZ);
 }
 
 void AnimatedGameEntity::destroy()

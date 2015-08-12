@@ -67,17 +67,17 @@ void GameEntity::deserializeEntity(std::string jsonObject)
 	std::size_t firstCloseBreket = jsonObject.find_first_of('}');
 	std::string positionObject = jsonObject.substr((positionObjectIndex + _positionKey.length()), (firstCloseBreket - (positionObjectIndex + _positionKey.length())));
 
-	int x = 0, y = 0, z = 0;
+	float x = 0, y = 0, z = 0;
 	vector<std::string> positionParts = Common::splitString(positionObject, ',');
 	for (int i = 0; i < positionParts.size();i++)
 	{
 		vector<std::string> parts = Common::splitString(positionParts[i], ':');
 		if (Common::trimString(parts[0]) == "x")
-			x = Common::StringToInt(parts[1]);
+			x = (float)Common::StringToInt(parts[1]);
 		if (Common::trimString(parts[0]) == "y")
-			y = Common::StringToInt(parts[1]);
+			y = (float)Common::StringToInt(parts[1]);
 		if (Common::trimString(parts[0]) == "z")
-			z = Common::StringToInt(parts[1]);
+			z = (float)Common::StringToInt(parts[1]);
 	}
 
 	this->setPosition(Position3D(x,y,z));
@@ -88,7 +88,7 @@ void GameEntity::deserializeEntity(std::string jsonObject)
 		vector<std::string> parts = Common::splitString(allObjects[i], ':');
 		if (Common::trimString(parts[0]) == _angleZKey)
 		{
-			_entity->setAngleXYZ(0, 0, Common::StringToInt(Common::trimString(parts[1])));
+			_angleZ = (float)Common::StringToInt(Common::trimString(parts[1]));
 		}
 		if (Common::trimString(parts[0]) == _resourcePathKey){
 			_tempResourcePath = Common::trimString(parts[1].substr(0, parts[1].find("}")-1));
@@ -129,9 +129,6 @@ void GameEntity::moveBackward(float acceleration)
 {
 	float x = 0.f; x = this->getPosition().getX() - (acceleration * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
 	float y = 0.f; y = this->getPosition().getY() + (acceleration * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
-
-	//float x = this->getPosition().getX() - acceleration * (*_deltaTime) - sin(this->getINDIEntity()->getAngleZ()*3.14 / 180.f);
-	//float y = this->getPosition().getY() - acceleration * (*_deltaTime) + cos(this->getINDIEntity()->getAngleZ()*3.14 / 180.f);
 
 	this->setPosition(Position3D(x, y, this->getPosition().getZ()));
 }

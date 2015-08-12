@@ -12,6 +12,7 @@ void StaticGameEntity::draw()
 	getMasterInstance()->_surfaceManager->add(_surface, getResourcePath(), IND_OPAQUE, IND_32);
 	getINDIEntity()->setSurface(_surface);
 	getINDIEntity()->setPosition(getPosition().getX(), getPosition().getY(), getPosition().getZ());
+	getINDIEntity()->setAngleXYZ(getINDIEntity()->getAngleX(), getINDIEntity()->getAngleY(), _angleZ);
 }
 
 void StaticGameEntity::destroy()

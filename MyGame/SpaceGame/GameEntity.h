@@ -55,6 +55,8 @@ protected:
 	Position3D _position;
 	float* _deltaTime;
 
+	float _angleZ = 0;
+
 	CIndieLib* getMasterInstance();
 	const char*  getResourcePath();
 };
