@@ -3,17 +3,20 @@ class Position2D
 {
 public:
 	Position2D();
-	Position2D(int x, int y);
+	Position2D(float x, float y);
 
 	~Position2D();
 
-	int getX();
-	int getY();
+	float getX();
+	float getY();
 
-	void setX(int x);
-	void setY(int y);
-private:	
-	int _x;
-	int _y;
+	
+private:
+	float _x;
+	float _y;
+
+protected:
+	void setX(float x);
+	void setY(float y);
 };
 
