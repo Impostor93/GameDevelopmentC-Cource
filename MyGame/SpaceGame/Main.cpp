@@ -9,6 +9,9 @@
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"
 #include "GameEntityManager.h"
+#include "IrrKlang.h"
+
+//using namespace irrklang;
 /*
 ==================
 Main
@@ -20,6 +23,7 @@ const float _accelerationStep = 1.f;
 float rotation = 0;
 float* mDelta = new float(0);
 GameEntityManager* _gameEntityManager;
+IND_Animation *getColisionBorder();
 
 int IndieLib()
 {
@@ -30,9 +34,8 @@ int IndieLib()
 
 	_gameEntityManager = new GameEntityManager(mI);
 
-
 	_gameEntityManager->createAndAddEntity("Ship", ShipObject, Position3D(400, 570, 3), "../SpaceGame/resources/animations/Enemy.xml", mDelta);
-	_gameEntityManager->createAndAddEntity("EnemyShip", ShipObject, Position3D(10, 0, 3), "../SpaceGame/resources/animations/Spaceship.xml", mDelta);
+	_gameEntityManager->createAndAddEntity("EnemyShip", ShipObject, Position3D(0, 0, 3), "../SpaceGame/resources/animations/Spaceship.xml", mDelta);
 	_gameEntityManager->createAndAddEntity("Space", StaticObject, Position3D(0, 0, 1), "../SpaceGame/resources/galaxy.jpg", mDelta);
 	
 	//_gameEntityManager->loadEntityFromJSON("../save.js", mDelta);
@@ -48,12 +51,19 @@ int IndieLib()
 	Ship* ship = (Ship*)_gameEntityManager->getEntity("Ship");
 	Ship* enemy_ship = (Ship*)_gameEntityManager->getEntity("EnemyShip");
 
+	/*ISoundEngine* sound = createIrrKlangDevice();
+	if (!sound) return 0;
+	sound->play2D("../SpaceGame/resources/sound/smt.mp3", true);*/
+
 	float mWidth = ship->getINDIEntity()->getRegionWidth() / 2;
 	float mHeight = ship->getINDIEntity()->getRegionHeight() / 2;
 
 	ship->getINDIEntity()->setHotSpot(0.5f, 0.5f);
+	ship->getINDIEntity()->setBoundingCircle("ship", 500, 500, 5);
+
 	enemy_ship->getINDIEntity()->setSequence(1);
 	enemy_ship->getINDIEntity()->setAngleXYZ(0, 0, (float)90);
+	enemy_ship->getINDIEntity()->setBoundingRectangle("ship", 5, 5, 300, 660);
 
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())  //idle
 	{
@@ -133,19 +143,20 @@ int IndieLib()
 		ship->Shooting();
 		enemy_ship->getINDIEntity()->setPosition((float)mI->_input->getMouseX(), 50, 3);
 
-		/*if (mI->_input->getMouseX() < 10)
-		{
-			enemy_ship->getINDIEntity()->setAngleXYZ(0, 0, (float)90);
-		}*/
-		/*else if (mI->_input->getMouseX() > 790)
-		{
-			enemy_ship->setAngleXYZ(0, 0, (float)-90);
-			enemy_ship->getINDIEntity()->setPosition((float)mI->_input->getMouseX(), 50, 3);
-		}*/
+		//if (mI->_input->getMouseX() < 10)
+		//{
+		//	enemy_ship->getINDIEntity()->setAngleXYZ(0, 0, (float)90);
+		//}
+		//else if (mI->_input->getMouseX() > 790)
+		//{
+		//	enemy_ship->setAngleXYZ(0, 0, (float)-90);
+		//	enemy_ship->getINDIEntity()->setPosition((float)mI->_input->getMouseX(), 50, 3);
+		/*}*/
 
 		mI->_input->update();
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
+		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255);
 		mI->_render->endScene();
 	}
 

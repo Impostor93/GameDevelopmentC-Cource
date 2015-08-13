@@ -17,12 +17,12 @@ private:
 public:
 	Ship(CIndieLib* masterInstance, Position3D position, const char* path, float* deltaTime);
 	~Ship();
+	
 
 	void FireShoot();
-
 	void moveForward(float acceleration, bool lockInWindow);
-
 	void Shooting();
+
 };
 
 #endif

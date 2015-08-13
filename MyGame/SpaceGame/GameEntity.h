@@ -40,6 +40,7 @@ public:
 	void setPosition(Position3D position);
 
 	IND_Entity2d* getINDIEntity();
+	IND_Entity2d* getColisionBorder();
 
 	std::string serializeEntityState();
 	void deserializeEntity(std::string jsonEntity);

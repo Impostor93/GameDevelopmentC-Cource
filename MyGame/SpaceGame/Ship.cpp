@@ -9,6 +9,7 @@ Ship::Ship(CIndieLib* masterInstance, Position3D position, const char* path, flo
 		_projectile[i] = new Projectile(masterInstance, Position3D(10000, 10000, _position.getZ() - 1)
 										, "../SpaceGame/resources/projectile.png", deltaTime);
 		_projectile[i]->draw();
+
 	}
 }
 
@@ -47,6 +48,6 @@ void Ship::FireShoot()
 
 	projectile->setPosition(Position3D(offsetX, offsetY, projectile->getPosition().getZ()));
 	projectile->getINDIEntity()->setAngleXYZ(0, 0, angle);
-
 	projectile->setSpeed(this->getINDIEntity()->getAngleZ());
+	projectile->getINDIEntity()->setBoundingCircle("projectile", 3, 3, 5);
 }
