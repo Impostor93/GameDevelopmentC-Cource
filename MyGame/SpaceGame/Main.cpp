@@ -30,6 +30,7 @@ int IndieLib()
 
 	_gameEntityManager = new GameEntityManager(mI);
 
+
 	_gameEntityManager->createAndAddEntity("Ship", ShipObject, Position3D(400, 570, 3), "../SpaceGame/resources/animations/Enemy.xml", mDelta);
 	_gameEntityManager->createAndAddEntity("EnemyShip", ShipObject, Position3D(10, 0, 3), "../SpaceGame/resources/animations/Spaceship.xml", mDelta);
 	_gameEntityManager->createAndAddEntity("Space", StaticObject, Position3D(0, 0, 1), "../SpaceGame/resources/galaxy.jpg", mDelta);
@@ -40,7 +41,6 @@ int IndieLib()
 
 	float mAngle = 0;
 	float acc = 0.0f;
-
 	float mPosX = 0;
 	float mPosY = 0;
 	int rotateSpeed = 200;
@@ -118,7 +118,6 @@ int IndieLib()
 				ship->moveForward(acc, true);
 				//TODO: Stop animation
 			}
-
 			///*sound->play2D("../SpaceGame/resources/sound/flight.mp3", true);*/
 		}
 

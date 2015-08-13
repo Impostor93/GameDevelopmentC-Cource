@@ -5,6 +5,7 @@ AnimatedGameEntity::AnimatedGameEntity(CIndieLib* masterInstance, Position3D pos
 {
 	_animation = IND_Animation::newAnimation();
 
+
 	float innitalPosX = 0;
 	float innitalPosY = 0;
 	getINDIEntity()->setPosition((float)innitalPosX, (float)innitalPosY, 5);
@@ -21,7 +22,6 @@ void AnimatedGameEntity::draw()
 
 void AnimatedGameEntity::destroy()
 {
-
 }
 
 void AnimatedGameEntity::setSequence(int sequence)
