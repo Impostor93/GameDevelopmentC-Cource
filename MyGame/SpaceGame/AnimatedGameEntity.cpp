@@ -1,48 +1,27 @@
 #include "AnimatedGameEntity.h"
-using namespace std;
 
-AnimatedGameEntity::AnimatedGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath)
-	:GameEntity(masterInstance, position, resourcePath)
+AnimatedGameEntity::AnimatedGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath, float* deltaTime)
+	:GameEntity(masterInstance, position, resourcePath, deltaTime)
 {
 	_animation = IND_Animation::newAnimation();
-	masterInstance->_animationManager->addToSurface(_animation, getResourcePath(), IND_ALPHA, IND_16);
-	*accX = 1.0f;
-	*accY = 1.0f;
+
 	float innitalPosX = 0;
 	float innitalPosY = 0;
 	getINDIEntity()->setPosition((float)innitalPosX, (float)innitalPosY, 5);
 }
 
-void AnimatedGameEntity::Draw()
-{	
+void AnimatedGameEntity::draw()
+{
+	getMasterInstance()->_animationManager->addToSurface(_animation, getResourcePath(), IND_ALPHA, IND_16);
 	getINDIEntity()->setAnimation(_animation);
-	getINDIEntity()->setHotSpot(0.5f, 0.5f);
-	getINDIEntity()->setScale(0.32f,0.32f);
+	getINDIEntity()->setScale(0.29f,0.29f);
+	getINDIEntity()->setPosition(getPosition().getX(), getPosition().getY(), getPosition().getZ());
+	getINDIEntity()->setAngleXYZ(getINDIEntity()->getAngleX(), getINDIEntity()->getAngleY(), _angleZ);
 }
 
-
-void AnimatedGameEntity::setSpeedX(float spX){*accX = spX;}
-void AnimatedGameEntity::setSpeedY(float spY){*accY = spY;}
-
-void AnimatedGameEntity::accelerate(float move)
+void AnimatedGameEntity::destroy()
 {
-	float angle = getINDIEntity()->getAngleZ()*PI/180.f;
-	*accX = *accX + sin(angle)*move;
-	*accY = *accY - cos(angle)*move;
-}
 
-void AnimatedGameEntity::decelerate(float move)
-{
-	float angle = getINDIEntity()->getAngleZ()*PI/180.f;
-	*accX = *accX - sin(angle)*move;
-	*accY = *accY + cos(angle)*move;
-}
-
-float AnimatedGameEntity::getPosX(){ return getINDIEntity()->getPosX(); }
-float AnimatedGameEntity::getPosY(){ return getINDIEntity()->getPosY(); }
-
-void AnimatedGameEntity::Destroy()
-{
 }
 
 void AnimatedGameEntity::setSequence(int sequence)
@@ -64,15 +43,12 @@ void AnimatedGameEntity::setAngleXYZ(float x, float y, float z)
 }
 
 
-void AnimatedGameEntity::setPosition(float x, float y, float z)
+void AnimatedGameEntity::setPosition(Position3D position)
 {
-	if (getINDIEntity())
-		getINDIEntity()->setPosition(x, y, z);
-}
+	_position = position;
 
-float AnimatedGameEntity::getAngleZ()
-{
-	return getINDIEntity()->getAngleZ();
+	if (getINDIEntity())
+		getINDIEntity()->setPosition(position.getX(), position.getY(), position.getZ());
 }
 
 AnimatedGameEntity::~AnimatedGameEntity()

@@ -5,13 +5,15 @@ class Position3D : public Position2D
 {
 public:
 	Position3D();
-	Position3D(int x, int y,int z);
+	Position3D(float x, float y, float z);
 	~Position3D();
 
-	int getZ();
-	void setZ(int z);
+	float getZ();
 
 private:
-	int _z;
+	float _z;
+
+protected:
+	void setZ(float z);
 };
 

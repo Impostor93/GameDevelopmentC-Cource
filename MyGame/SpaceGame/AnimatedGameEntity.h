@@ -1,32 +1,25 @@
 #pragma once
+#ifndef ANIMATEDGAMEENTITY_H
+#define ANIMATEDGAMEENTITY_H
+
 #include "GameEntity.h"
 #include "IND_Animation.h"
 
 class AnimatedGameEntity : public GameEntity
 {
 public:
-	AnimatedGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath);
+	AnimatedGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath, float* deltaTime);
 	~AnimatedGameEntity();
 	
-	void Draw();
-	void Destroy();
+	void draw();
+	void destroy();
 	void setSequence(int sequence);
 	void setNumReplays(int numreplays);
 	void setAngleXYZ(float x, float y, float z);
-	void setPosition(float x, float y, float z);
-	float getPosX();
-	float getPosY();
-
-	float *accX = new float(0);
-	float *accY = new float(0);
-
-	float getAngleZ();
-	void setSpeedX(float spX);
-	void setSpeedY(float spY);
-	void accelerate(float move);
-	void decelerate(float move);
+	void setPosition(Position3D position);
 
 private:
 	IND_Animation* _animation = 0;
 };
 
+#endif

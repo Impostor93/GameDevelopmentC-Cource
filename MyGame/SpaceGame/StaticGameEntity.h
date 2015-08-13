@@ -18,10 +18,10 @@ protected:
 	IND_Surface* getSurface();
 
 public:
-	StaticGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath);
+	StaticGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath, float* deltaTime);
 	~StaticGameEntity();
 
-	void Destroy();
-	void Draw();
+	void destroy();
+	void draw();
 };
 #endif

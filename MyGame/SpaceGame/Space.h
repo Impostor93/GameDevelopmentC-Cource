@@ -8,7 +8,7 @@
 class Space : public StaticGameEntity
 {
 public:
-	Space(CIndieLib* masterInstance, Position3D position, const char* path);
+	Space(CIndieLib* masterInstance, Position3D position, const char* path, float* deltaTime);
 	~Space();
 };
 

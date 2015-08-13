@@ -7,7 +7,7 @@
 class Planet : public StaticGameEntity
 {
 public:
-	Planet(CIndieLib* masterInstance, Position3D position, const char* path);
+	Planet(CIndieLib* masterInstance, Position3D position, const char* path, float* deltaTime);
 	~Planet();
 };
 

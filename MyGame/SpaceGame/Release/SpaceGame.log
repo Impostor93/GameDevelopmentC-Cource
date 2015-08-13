@@ -1,16 +1,46 @@
-﻿Build started 11-Aug-15 16:31:31.
+﻿Build started 13-Aug-15 12:50:47.
      1>Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Visual Studio 2\VC\bin\CL.exe /c /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless" /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         C:\Program Files (x86)\Visual Studio 2\VC\bin\CL.exe /c /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless" /I"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /Od /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AnimatedGameEntity.cpp Common.cpp GameEntity.cpp GameEntityManager.cpp Main.cpp Planet.cpp Projectile.cpp Ship.cpp Space.cpp StaticGameEntity.cpp
+         AnimatedGameEntity.cpp
+     1>AnimatedGameEntity.cpp(18): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>AnimatedGameEntity.cpp(51): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Common.cpp
+     1>Common.cpp(24): warning C4018: '<' : signed/unsigned mismatch
+         GameEntity.cpp
+     1>GameEntity.cpp(10): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>GameEntity.cpp(11): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>GameEntity.cpp(33): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameEntity.cpp(40): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameEntity.cpp(53): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameEntity.cpp(54): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameEntity.cpp(55): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameEntity.cpp(57): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>GameEntity.cpp(72): warning C4018: '<' : signed/unsigned mismatch
+     1>GameEntity.cpp(86): warning C4018: '<' : signed/unsigned mismatch
+     1>GameEntity.cpp(116): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>GameEntity.cpp(120): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         GameEntityManager.cpp
+     1>GameEntityManager.cpp(89): warning C4018: '<' : signed/unsigned mismatch
          Main.cpp
-     1>Main.cpp(87): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>Main.cpp(88): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>Main.cpp(112): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>Main.cpp(117): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>Main.cpp(118): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>Main.cpp(144): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>Main.cpp(51): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(52): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(81): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Main.cpp(87): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+         Planet.cpp
+         Projectile.cpp
+     1>Projectile.cpp(16): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Projectile.cpp(17): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Ship.cpp
+     1>Ship.cpp(27): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(41): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+         Space.cpp
+         StaticGameEntity.cpp
+     1>StaticGameEntity.cpp(14): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Visual Studio 2\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib irrKlang.lib IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\My Stuff\Studying\GameDev\GameDev\C-game-homework(working directory)\GameDevelopmentC-Cource\MyGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\AnimatedGameEntity.obj
+         Release\Common.obj
+         Release\GameEntityManager.obj
          Release\Position3D.obj
          Release\Position2D.obj
          Release\Projectile.obj
@@ -31,4 +61,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.67
+Time Elapsed 00:00:21.80
