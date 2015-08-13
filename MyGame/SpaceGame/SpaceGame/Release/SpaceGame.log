@@ -1,0 +1,29 @@
+﻿Build started 20-Jul-15 17:49:27.
+     1>Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-course\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Visual Studio 2\VC\bin\CL.exe /c /I"D:\My Stuff\Materials\GameDev\GameDev\C-game-homework\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"D:\My Stuff\Materials\GameDev\GameDev\C-game-homework\GameDevelopmentC-Cource\MyGame\SpaceGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt AnimatedGameEntity.cpp Position3D.cpp Position2D.cpp Region.cpp Space.cpp GameEntity.cpp Main.cpp Planet.cpp Ship.cpp StaticGameEntity.cpp StaticResources.cpp tools\editor_tileless\CIndieLib.cpp
+         AnimatedGameEntity.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\GameEntity.h(5): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         Position3D.cpp
+         Position2D.cpp
+         Region.cpp
+         Space.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\Space.h(5): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         GameEntity.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\GameEntity.h(5): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         Main.cpp
+     1>Main.cpp(108): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         Planet.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\StaticGameEntity.h(5): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         Ship.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\StaticGameEntity.h(5): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         StaticGameEntity.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\StaticGameEntity.h(5): fatal error C1083: Cannot open include file: 'CIndieLib.h': No such file or directory
+         StaticResources.cpp
+         CIndieLib.cpp
+     1>d:\my stuff\studying\gamedev\gamedev\c-game-course\mygame\spacegame\spacegame\tools\editor_tileless\CIndieLib.h(8): fatal error C1083: Cannot open include file: 'Indie.h': No such file or directory
+     1>Done Building Project "D:\My Stuff\Studying\GameDev\GameDev\C-game-course\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.21
