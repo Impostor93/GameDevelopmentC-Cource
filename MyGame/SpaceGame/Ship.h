@@ -12,17 +12,20 @@ class Ship : public AnimatedGameEntity
 {
 private:
 	Projectile* _projectile[maxProjectiels];
-	int projectileIndex = 0;
+	int projectileIndex = -1;
 	double projectileSpeed = 1000.0;
-public:
-	Ship(CIndieLib* masterInstance, Position3D position, const char* path, float* deltaTime);
-	~Ship();
 	
+public:
+	Ship(CIndieLib* masterInstance, Position3D position, std::string path, IND_Surface* surface, AnimationMapper* animationMapper, float* deltaTime);
+	~Ship();
 
 	void FireShoot();
-	void moveForward(float acceleration, bool lockInWindow);
-	void Shooting();
 
+	void moveForward(float acceleration, bool lockInWindow);
+
+	void update();
+
+	Projectile** getProjectiles();
 };
 
 #endif

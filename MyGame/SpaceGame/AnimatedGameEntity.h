@@ -3,12 +3,13 @@
 #define ANIMATEDGAMEENTITY_H
 
 #include "GameEntity.h"
-#include "IND_Animation.h"
+#include "AnimationMapper.h"
+#include "Frame.h"
 
 class AnimatedGameEntity : public GameEntity
 {
 public:
-	AnimatedGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath, float* deltaTime);
+	AnimatedGameEntity(CIndieLib* masterInstance, Position3D position, std::string resourcePath, IND_Surface* surface, AnimationMapper* animationMapper, float* deltaTime);
 	~AnimatedGameEntity();
 	
 	void draw();
@@ -18,8 +19,24 @@ public:
 	void setAngleXYZ(float x, float y, float z);
 	void setPosition(Position3D position);
 
+	void stopAnimation();
+	void startAnimation();
+	bool isAnimationStoped();
+	AnimationMapper* getAnimationMapper();
+
+	void update();
 private:
-	IND_Animation* _animation = 0;
+	AnimationMapper* _animationMapper = 0;
+	std::vector<Frame>* _animationFrame;
+
+	Frame* _frame = 0;
+	Region* _region = 0;
+
+	int _animationCurrentIndex = 0;
+
+	IND_Timer* _timer = 0;
+
+	bool _isAnimationStoped = true;
 };
 
 #endif

@@ -1,30 +1,34 @@
 #include "StaticGameEntity.h"
 
 
-StaticGameEntity::StaticGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath, float* deltaTime)
-	:GameEntity(masterInstance, position, resourcePath, deltaTime)
+StaticGameEntity::StaticGameEntity(CIndieLib* masterInstance, Position3D position, std::string resource, IND_Surface* surface, SpriteCordinateMapper* spriteMapper, float* deltaTime)
+	:GameEntity(masterInstance, position, resource, surface, deltaTime)
 {
-	_surface = IND_Surface::newSurface();
+	_spriteMapper = spriteMapper;
 }
 
 void StaticGameEntity::draw()
 {
-	getMasterInstance()->_surfaceManager->add(_surface, getResourcePath(), IND_OPAQUE, IND_32);
-	getINDIEntity()->setSurface(_surface);
-	getINDIEntity()->setPosition(getPosition().getX(), getPosition().getY(), getPosition().getZ());
-	getINDIEntity()->setAngleXYZ(getINDIEntity()->getAngleX(), getINDIEntity()->getAngleY(), _angleZ);
+	this->getINDIEntity()->setSurface(new IND_Surface(*getSurface()));// GameEntity::getSurface());
+	Region regionOfEntity = _spriteMapper->getSpriteRegionByName(getResourcePath());
+	this->getINDIEntity()->setRegion(regionOfEntity.getOffSetX(), regionOfEntity.getOffSetY(), regionOfEntity.getWidth(), regionOfEntity.getHeight());
 }
 
 void StaticGameEntity::destroy()
 {
 	if (getINDIEntity() != NULL){
 		getMasterInstance()->_entity2dManager->remove(getINDIEntity());
-		getMasterInstance()->_surfaceManager->remove(_surface);
 		getINDIEntity()->destroy();
 	}
 }
 
+void StaticGameEntity::update()
+{
+	GameEntity::update();
+	getINDIEntity()->setAngleXYZ(getINDIEntity()->getAngleX(), getINDIEntity()->getAngleY(), _angleZ);
+}
+
 StaticGameEntity::~StaticGameEntity()
 {
-	_surface = 0;
+	
 }

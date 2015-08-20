@@ -1,6 +1,6 @@
 #pragma once
-#ifndef StaticGameEntity_H
-#define StaticGameEntity_H
+#ifndef STATICGAMEENTITY_H
+#define STATICGAMEENTITY_H
 
 #include "CIndieLib.h"
 #include "Position3D.h"
@@ -9,19 +9,21 @@
 #include "IND_Surface.h"
 #include "Region.h"
 #include "GameEntity.h"
+#include "SpriteCordinateMapper.h"
 
 class StaticGameEntity: public GameEntity
 {
-private:
-	IND_Surface* _surface;
-protected:
-	IND_Surface* getSurface();
-
 public:
-	StaticGameEntity(CIndieLib* masterInstance, Position3D position, const char* resourcePath, float* deltaTime);
+	StaticGameEntity(CIndieLib* masterInstance, Position3D position, std::string resource, IND_Surface* surface, SpriteCordinateMapper* spriteMapper, float* deltaTime);
 	~StaticGameEntity();
 
 	void destroy();
 	void draw();
+
+	void update();
+
+protected:
+	SpriteCordinateMapper* _spriteMapper;
+
 };
 #endif

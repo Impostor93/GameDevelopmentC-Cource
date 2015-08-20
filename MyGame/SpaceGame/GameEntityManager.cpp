@@ -1,11 +1,10 @@
 #include "GameEntityManager.h"
-#include "StaticGameEntity.h"
-#include "AnimatedGameEntity.h"
-#include "Ship.h"
 
-GameEntityManager::GameEntityManager(CIndieLib* master) :
-_indiMasterInstance(master)
+GameEntityManager::GameEntityManager(CIndieLib* master, SpriteCordinateMapper* spriteCordinates, AnimationMapper* animationMapper, const char* resourcePath) :
+_indiMasterInstance(master), _spriteCordinates(spriteCordinates), _animationMapper(animationMapper)
 {
+	_sharedSurface = IND_Surface::newSurface();
+	_indiMasterInstance->_surfaceManager->add(_sharedSurface, resourcePath, IND_OPAQUE, IND_32);
 }
 
 
@@ -36,15 +35,15 @@ void GameEntityManager::createAndAddEntity(std::string key, TypeOfGameObject typ
 {
 	GameEntity* entity = 0;
 	if (type == StaticObject)
-		entity = new StaticGameEntity(_indiMasterInstance, position, resourcePath, deltaTime);
+		entity = new StaticGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _spriteCordinates, deltaTime);
 	else if (type == ShipObject)
-		entity = new Ship(_indiMasterInstance, position, resourcePath, deltaTime);
+		entity = new Ship(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
 	else
-		entity = new AnimatedGameEntity(_indiMasterInstance, position, resourcePath, deltaTime);
+		entity = new AnimatedGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
 
-	_listOfGameEntityNamesAndTypes[key] = type;
 	addEntity(key, entity, type);
 }
+
 void GameEntityManager::saveEntities(std::string filePath)
 {
 
@@ -63,7 +62,6 @@ void GameEntityManager::saveEntities(std::string filePath)
 }
 void GameEntityManager::loadEntityFromJSON(std::string fileName, float* deltaTime)
 {
-
 	if (_listOfGameEntities.size() != 0 && _listOfGameEntityNamesAndTypes.size() != 0)
 	{
 		_listOfGameEntityNamesAndTypes.clear();
@@ -106,6 +104,35 @@ void GameEntityManager::drawEntities()
 	for (std::map<std::string, GameEntity*>::iterator it = _listOfGameEntities.begin(); it != _listOfGameEntities.end(); ++it)
 		it->second->draw();
 }
+void GameEntityManager::update()
+{
+	for (std::map<std::string, GameEntity*>::iterator it = _listOfGameEntities.begin(); it != _listOfGameEntities.end(); ++it)
+		it->second->update();
+}
 
-
-
+void GameEntityManager::setRectangleCollisionArea(std::string entityKey, float offsetX, float offsetY, float width, float height)
+{
+	this->getEntity(entityKey)->getINDIEntity()->setBoundingRectangle(entityKey.c_str(), offsetX, offsetY, width, height);
+}
+void GameEntityManager::setTriengleCollisionArea(std::string entityKey, Position2D firstVector, Position2D secondVector, Position2D thirdVector)
+{
+	this->getEntity(entityKey)->getINDIEntity()->setBoundingTriangle(entityKey.c_str(), firstVector.getX(), firstVector.getY()
+		, secondVector.getX(), secondVector.getY(), thirdVector.getX(), thirdVector.getY());
+}
+void GameEntityManager::setCircleCollisionArea(std::string entityKey, float offsetX, float offsetY, float radios)
+{
+	this->getEntity(entityKey)->getINDIEntity()->setBoundingCircle(entityKey.c_str(), offsetX, offsetY, radios);
+}
+void GameEntityManager::setHotSpot(std::string entityKey, float offsetX, float offsetY)
+{
+	this->getEntity(entityKey)->getINDIEntity()->setHotSpot(offsetX, offsetY);
+}
+bool GameEntityManager::checkForCollision(std::string entityKey, std::string secondEntityKey)
+{
+	return _indiMasterInstance->_entity2dManager->isCollision(getEntity(entityKey)->getINDIEntity(), entityKey.c_str(),
+		getEntity(secondEntityKey)->getINDIEntity(), secondEntityKey.c_str());
+}
+bool GameEntityManager::checkForCollision(std::string entityKey, IND_Entity2d* entity, std::string secondEntityKey, IND_Entity2d* secondEntity)
+{
+	return _indiMasterInstance->_entity2dManager->isCollision(entity, entityKey.c_str(), secondEntity, secondEntityKey.c_str());
+}

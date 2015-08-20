@@ -3,25 +3,25 @@ class Region
 {
 public:
 	Region();
-	Region(float offsetY, float offsetX, float width, float height);
+	Region(int offsetY, int offsetX, int width, int height);
 	~Region();
 
 	//Getters
-	float getOffSetY();
-	float getOffSetX();
-	float getWidth();
-	float getHeight();
+	int getOffSetY();
+	int getOffSetX();
+	int getWidth();
+	int getHeight();
 
 	//Setters
-	void setOffSetY(float offsetY);
-	void setOffSetX(float offsetX);
-	void setWidth(float width);
-	void setHeight(float height);
+	void setOffSetY(int offsetY);
+	void setOffSetX(int offsetX);
+	void setWidth(int width);
+	void setHeight(int height);
 
 private:
-	float _offSetY;
-	float _offSetX;
-	float _width;
-	float _height;
+	int _offSetY;
+	int _offSetX;
+	int _width;
+	int _height;
 };
 

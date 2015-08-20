@@ -16,8 +16,9 @@ class GameEntity
 private:
 	CIndieLib* _masterInstance = 0;
 	IND_Entity2d* _entity;
+	IND_Surface* _surface;
 
-	const char* _resourcePath;
+	std::string _resourcePath;
 	std::string _tempResourcePath;
 
 	const std::string _positionKey = "Position";
@@ -28,29 +29,30 @@ private:
 	float _height;
 
 public:
-	GameEntity(CIndieLib* master, Position3D position, const char* resourcePath, float* deltaTime);
+	GameEntity(CIndieLib* master, Position3D position, std::string resourcePath, IND_Surface* surface, float* deltaTime);
 
 	~GameEntity();
 
 	virtual void draw()=0;
-	virtual void drawRegion(Region* region);
 	virtual void destroy()=0;
+	virtual void update();
 
-	Position3D getPosition();
 	void setPosition(Position3D position);
 
+	Position3D getPosition();
 	IND_Entity2d* getINDIEntity();
-	IND_Entity2d* getColisionBorder();
+	IND_Surface* getSurface();
 
 	std::string serializeEntityState();
 	void deserializeEntity(std::string jsonEntity);
 
 	virtual void moveForward(float acceleration, bool lockInWindow);
-
 	virtual void moveBackward(float acceleration);
 
 	void rotateLeft(float rotationSpeed);
 	void rotateRight(float rotationSpeed);
+
+	std::string  getResourcePath();
 
 protected:
 	Position3D _position;
@@ -59,6 +61,5 @@ protected:
 	float _angleZ = 0;
 
 	CIndieLib* getMasterInstance();
-	const char*  getResourcePath();
 };
 #endif
