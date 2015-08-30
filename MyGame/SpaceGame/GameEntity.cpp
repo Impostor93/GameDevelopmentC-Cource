@@ -21,7 +21,7 @@ GameEntity::~GameEntity()
 	if (_entity)
 		_entity->destroy();
 
-	_entity = 0;
+	//_entity = 0;
 
 	_deltaTime = 0;
 	_masterInstance = 0;

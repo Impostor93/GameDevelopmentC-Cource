@@ -13,6 +13,7 @@ class Ship : public AnimatedGameEntity
 private:
 	Projectile* _projectile[maxProjectiels];
 	int projectileIndex = -1;
+	int _balnsior = 0;
 	double projectileSpeed = 1000.0;
 	
 public:

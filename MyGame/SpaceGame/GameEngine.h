@@ -9,7 +9,7 @@
 #include "GameEntity.h"
 #include "ship.h"
 #include "Space.h"
-#include "Planet.h"
+#include "SpaceBody.h"
 #include "IND_Animation.h"
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"

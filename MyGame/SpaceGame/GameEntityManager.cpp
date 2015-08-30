@@ -20,13 +20,27 @@ void GameEntityManager::addEntity(std::string key, GameEntity* entity, TypeOfGam
 }
 GameEntity* GameEntityManager::getEntity(std::string key)
 {
-	if (_listOfGameEntities.count(key))
+	if (_listOfGameEntities.count(key) != 0)
 		return _listOfGameEntities[key];
 	else
 		return NULL;
 }
+map<std::string, GameEntity*> GameEntityManager::getEntities()
+{
+	return _listOfGameEntities;
+}
+TypeOfGameObject GameEntityManager::getType(std::string key)
+{
+	if (_listOfGameEntities.count(key) != 0)
+		return _listOfGameEntityNamesAndTypes[key];
+	else
+		return Null;
+}
 void GameEntityManager::removeEntity(std::string key)
 {
+	if (getEntity(key) != NULL)
+		getEntity(key)->destroy();
+
 	_listOfGameEntities.erase(key);
 	_listOfGameEntityNamesAndTypes.erase(key);
 }
@@ -34,12 +48,14 @@ void GameEntityManager::removeEntity(std::string key)
 void GameEntityManager::createAndAddEntity(std::string key, TypeOfGameObject type, Position3D position, const char* resourcePath, float* deltaTime)
 {
 	GameEntity* entity = 0;
-	if (type == StaticObject)
-		entity = new StaticGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _spriteCordinates, deltaTime);
-	else if (type == ShipObject)
+	if (type == ShipObject)
 		entity = new Ship(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
-	else
+	else if (type == SpaceBodyObject)
+		entity = new SpaceBody(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
+	else if (type == AnimatedObject)
 		entity = new AnimatedGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
+	else
+		entity = new StaticGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _spriteCordinates, deltaTime);
 
 	addEntity(key, entity, type);
 }
@@ -64,13 +80,14 @@ void GameEntityManager::loadEntityFromJSON(std::string fileName, float* deltaTim
 {
 	if (_listOfGameEntities.size() != 0 && _listOfGameEntityNamesAndTypes.size() != 0)
 	{
-		_listOfGameEntityNamesAndTypes.clear();
-		_listOfGameEntities.clear();
 		for (std::map<std::string, GameEntity*>::iterator it = _listOfGameEntities.begin(); it != _listOfGameEntities.end(); ++it)
 		{
 			it->second->destroy();
 			it->second->~GameEntity();
 		}
+
+		_listOfGameEntityNamesAndTypes.clear();
+		_listOfGameEntities.clear();
 	}
 
 	// create an input stream
@@ -91,7 +108,7 @@ void GameEntityManager::loadEntityFromJSON(std::string fileName, float* deltaTim
 				typeOfObject = (TypeOfGameObject)Common::StringToInt(keyValue[1]);
 		}
 		
-		createAndAddEntity(key, typeOfObject, Position3D(0, 0, 0), "", deltaTime);
+		createAndAddEntity(key, typeOfObject, Position3D(0, 0, 0), "", deltaTime);//When load animations throw exception because empty resource!
 
 		getEntity(key)->deserializeEntity(line);
 	}
@@ -129,10 +146,21 @@ void GameEntityManager::setHotSpot(std::string entityKey, float offsetX, float o
 }
 bool GameEntityManager::checkForCollision(std::string entityKey, std::string secondEntityKey)
 {
+	if (!getEntity(entityKey))
+		return false;
+	if (!getEntity(secondEntityKey))
+		return false;
+
 	return _indiMasterInstance->_entity2dManager->isCollision(getEntity(entityKey)->getINDIEntity(), entityKey.c_str(),
 		getEntity(secondEntityKey)->getINDIEntity(), secondEntityKey.c_str());
 }
-bool GameEntityManager::checkForCollision(std::string entityKey, IND_Entity2d* entity, std::string secondEntityKey, IND_Entity2d* secondEntity)
+bool GameEntityManager::checkForCollision(std::string entityKey, GameEntity* entity, std::string secondEntityKey, GameEntity* secondEntity)
 {
-	return _indiMasterInstance->_entity2dManager->isCollision(entity, entityKey.c_str(), secondEntity, secondEntityKey.c_str());
+	if (!entity || !secondEntity)
+		return false;
+
+	if (!entity->getINDIEntity() || !secondEntity->getINDIEntity())
+		return false;
+
+	return _indiMasterInstance->_entity2dManager->isCollision(entity->getINDIEntity(), entityKey.c_str(), secondEntity->getINDIEntity(), secondEntityKey.c_str());
 }

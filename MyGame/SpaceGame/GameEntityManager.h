@@ -9,6 +9,7 @@
 #include "Ship.h"
 #include "SpriteCordinateMapper.h"
 #include "AnimationMapper.h"
+#include "SpaceBody.h"
 
 class GameEntityManager
 {
@@ -22,6 +23,8 @@ public:
 
 	void addEntity(std::string key, GameEntity* entity, TypeOfGameObject type);
 	void removeEntity(std::string key);
+	TypeOfGameObject getType(std::string key);
+	map<std::string, GameEntity*> getEntities();
 
 	void saveEntities(std::string filePath);
 	void loadEntityFromJSON(std::string filePath, float* deltaTime);
@@ -34,7 +37,7 @@ public:
 	void setCircleCollisionArea(std::string entityKey, float offsetX, float offsetY, float radios);
 	void setHotSpot(std::string entityKey, float offsetX, float offsetY);
 	bool checkForCollision(std::string entityKey, std::string scondEntityKey);
-	bool checkForCollision(std::string entityKey, IND_Entity2d* entity, std::string scondEntityKey, IND_Entity2d* secondEntity);
+	bool checkForCollision(std::string entityKey, GameEntity* entity, std::string secondEntityKey, GameEntity* secondEntity);
 
 private:
 	map<std::string,GameEntity*> _listOfGameEntities;

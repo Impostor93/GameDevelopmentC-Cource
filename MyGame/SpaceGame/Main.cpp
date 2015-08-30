@@ -4,7 +4,7 @@
 #include "GameEntity.h"
 #include "ship.h"
 #include "Space.h"
-#include "Planet.h"
+#include "SpaceBody.h"
 #include "IND_Animation.h"
 #include "IND_AnimationManager.h"
 #include "AnimatedGameEntity.h"
@@ -16,11 +16,9 @@ Main
 ==================
 */
 const float _maxAccelerationValue = 600.f;
-const float _accelerationStep = 1.f;
+const float _accelerationStep = 0.1f;
 
 float rotation = 0;
-//float* mDelta = new float(0);
-//GameEntityManager* _gameEntityManager;
 GameEngine* _engine;
 
 int IndieLib()
@@ -38,7 +36,6 @@ int IndieLib()
 		mI->_input->update();
 
 		_engine->processUserInput();
-		_engine->manageCollisions();
 		_engine->update();
 
 		mI->_input->update();
@@ -48,6 +45,8 @@ int IndieLib()
 		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255);
 
 		mI->_render->endScene();
+
+		_engine->manageCollisions();
 	}
 
 	//sound->drop();

@@ -27,7 +27,7 @@ void AnimatedGameEntity::update()
 	GameEntity::update();
 
 	getINDIEntity()->setAngleXYZ(getINDIEntity()->getAngleX(), getINDIEntity()->getAngleY(), _angleZ);
-	
+
 	if (!_isAnimationStoped && _timer->getTicks() >= _frame->getTime())
 	{
 		_animationCurrentIndex++;
@@ -35,12 +35,24 @@ void AnimatedGameEntity::update()
 	}
 
 	if (_animationCurrentIndex >= _animationFrame->size())
+	{
 		_animationCurrentIndex = 0;
+		_currentNumberOfReplay++;
+	}
+
+	if (_numberOfReplay != -1 && _currentNumberOfReplay >= _numberOfReplay)
+		this->stopAnimation();
 
 	_frame = &_animationFrame->at(_animationCurrentIndex);
 	_region = &_frame->getRegionOfFrame();
 
 	getINDIEntity()->setRegion(_region->getOffSetX(), _region->getOffSetY(), _region->getWidth(), _region->getHeight());
+}
+
+void AnimatedGameEntity::startAnimation()
+{
+	_isAnimationStoped = false;
+	_timer->start();
 }
 void AnimatedGameEntity::stopAnimation()
 {
@@ -48,19 +60,14 @@ void AnimatedGameEntity::stopAnimation()
 	_animationCurrentIndex = 0;
 	_timer->stop();
 }
-void AnimatedGameEntity::startAnimation()
-{
-	_isAnimationStoped = false;
-	_timer->start();
-}
+
 bool AnimatedGameEntity::isAnimationStoped(){ return _isAnimationStoped; }
 
 AnimationMapper* AnimatedGameEntity::getAnimationMapper(){ return _animationMapper; }
 
 void AnimatedGameEntity::setNumReplays(int numreplays)
 {
-	if (getINDIEntity())
-		getINDIEntity()->setNumReplays(numreplays);
+	_numberOfReplay = numreplays;
 }
 
 void AnimatedGameEntity::setAngleXYZ(float x, float y, float z)
@@ -69,13 +76,12 @@ void AnimatedGameEntity::setAngleXYZ(float x, float y, float z)
 		getINDIEntity()->setAngleXYZ(x, y, z);
 }
 
-
 void AnimatedGameEntity::setPosition(Position3D position)
 {
 	_position = position;
 
-	if (getINDIEntity())
-		getINDIEntity()->setPosition(position.getX(), position.getY(), position.getZ());
+	//if (getINDIEntity())
+	//	getINDIEntity()->setPosition(position.getX(), position.getY(), position.getZ());
 }
 
 AnimatedGameEntity::~AnimatedGameEntity()

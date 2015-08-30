@@ -37,6 +37,9 @@ private:
 	IND_Timer* _timer = 0;
 
 	bool _isAnimationStoped = true;
+
+	int _currentNumberOfReplay = 0;
+	int _numberOfReplay = -1;
 };
 
 #endif

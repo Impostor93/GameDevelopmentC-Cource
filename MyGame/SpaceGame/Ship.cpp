@@ -7,7 +7,7 @@ Ship::Ship(CIndieLib* masterInstance, Position3D position, std::string path, IND
 	for (int i = 0; i < maxProjectiels; i++)
 	{
 		_projectile[i] = new Projectile(masterInstance, Position3D(10000, 10000, this->getPosition().getZ() - 1)
-				, "p2", getSurface(), animationMapper->getSpriteCordinateMapper(), deltaTime);
+				, "bullet", getSurface(), animationMapper->getSpriteCordinateMapper(), deltaTime);
 
 		_projectile[i]->draw();
 	}
@@ -41,24 +41,22 @@ void Ship::FireShoot()
 		projectileIndex = 0;
 	}
 
-	float angle = this->getINDIEntity()->getAngleZ()*3.14159265 / 180.f;
-	
-	float offsetX = _position.getX() + std::sin(angle) * 40;
-	float offsetY = _position.getY() - std::cos(angle) * 40;
-
 	Projectile* projectile = _projectile[projectileIndex];
-
 	int projectileRegion = projectile->getINDIEntity()->getRegionWidth();
 
-	int regionWidth = this->getINDIEntity()->getRegionWidth();
-	float a = regionWidth * 0.25f;
+	float angle = this->getINDIEntity()->getAngleZ()*3.14159265 / 180.f;
 
-	float midleOFShipX = (a / 2) + projectileRegion * 0.05;
+	//float a = _position.getX() - (this->getINDIEntity()->getRegionWidth() / 2);
+	
+	float offsetX = _position.getX() + (float)std::sin(angle) * 40;
+	float offsetY = _position.getY() - (float)std::cos(angle) * 40;
 
-	projectile->setPosition(Position3D(_position.getX() - midleOFShipX, offsetY, projectile->getPosition().getZ()));
-	projectile->getINDIEntity()->setAngleXYZ(0, 0, angle);
+	projectile->setPosition(Position3D(offsetX, offsetY, projectile->getPosition().getZ()));
 
-	projectile->setSpeed(this->getINDIEntity()->getAngleZ());
+	float x = std::sin(angle) * (*_deltaTime);
+	float y = -std::cos(angle) * (*_deltaTime);
+
+	projectile->setSpeed(this->getINDIEntity()->getAngleZ(),x , y);
 }
 
 Projectile** Ship::getProjectiles(){ return _projectile; }

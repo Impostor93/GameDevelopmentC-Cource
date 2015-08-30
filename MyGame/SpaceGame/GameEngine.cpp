@@ -7,7 +7,7 @@ GameEngine::GameEngine(CIndieLib* _masterInstance)
 	_spriteCordinates = new SpriteCordinateMapper();
 	_animationMapper = new AnimationMapper(_spriteCordinates);
 
-	_entityManager = new GameEntityManager(_masterInstance, _spriteCordinates, _animationMapper,"D:/Vs2012 Project/C++ game development course/Sprite.png");
+	_entityManager = new GameEntityManager(_masterInstance, _spriteCordinates, _animationMapper, "D:/Vs2012 Project/C++ game development course/Sprite.png");
 }
 void GameEngine::initialize()
 {
@@ -17,21 +17,31 @@ void GameEngine::initialize()
 	*mDelta = _masterInstance->_render->getFrameTime() / 1000.0f;
 
 	_entityManager->createAndAddEntity("Ship", ShipObject, Position3D(600, 600, 3), "Ship", mDelta);
-	_entityManager->createAndAddEntity("Space", StaticObject, Position3D(0, 0, 1), "galaxy", mDelta);
+	_entityManager->createAndAddEntity("Space", StaticObject, Position3D(0, 0, 1), "background", mDelta);
 
-	_entityManager->createAndAddEntity("Asteroid", StaticObject, Position3D(100, 100, 3), "a2", mDelta);
+	_entityManager->createAndAddEntity("Asteroid", SpaceBodyObject, Position3D(100, 200, 3), "asteroid", mDelta);
+	_entityManager->createAndAddEntity("SmallPlanet", SpaceBodyObject, Position3D(250, 200, 3), "planet1", mDelta);
+	_entityManager->createAndAddEntity("MediumPlanet", SpaceBodyObject, Position3D(450, 200, 3), "planet2", mDelta);
+
+	_entityManager->createAndAddEntity("RedPlanet", SpaceBodyObject, Position3D(650, 200, 3), "planet3", mDelta);
+	_entityManager->createAndAddEntity("BluePlanet", SpaceBodyObject, Position3D(800, 200, 3), "planet4", mDelta);
 
 	_entityManager->drawEntities();
 
 	Ship* ship = (Ship*)_entityManager->getEntity("Ship");
-	ship->getINDIEntity()->setHotSpot(0.05f, 0.145f);
-	ship->getINDIEntity()->setScale(0.25f, 0.25f);
 
-	_entityManager->setRectangleCollisionArea("Ship", 80, 120, 180, 350);
-	_entityManager->setTriengleCollisionArea("Ship", Position2D(100, 120), Position2D(162, 0), Position2D(240, 120));
+	ship->getINDIEntity()->setHotSpot(0.012f, 0.020f);
+	_entityManager->setRectangleCollisionArea("Ship", 10, 35, 55, 70);
+	_entityManager->setTriengleCollisionArea("Ship", Position2D(15, 35), Position2D(38, 3), Position2D(60, 35));
 
-	_entityManager->setCircleCollisionArea("Asteroid", 160, 140, 120);
-	_entityManager->setHotSpot("Asteroid", 0.05f, 0.075f);
+	_entityManager->setCircleCollisionArea("Asteroid", 72, 78, 60);
+
+	_entityManager->setCircleCollisionArea("SmallPlanet", 100, 100, 73);
+	_entityManager->setCircleCollisionArea("RedPlanet", 50, 50, 50);
+
+	_entityManager->setCircleCollisionArea("MediumPlanet", 100, 101, 95);
+	_entityManager->setCircleCollisionArea("BluePlanet", 110, 110, 96);
+
 }
 
 void GameEngine::update()
@@ -42,7 +52,6 @@ void GameEngine::update()
 
 void GameEngine::processUserInput()
 {
-	//_entityManager->getEntity("Asteroid")->getINDIEntity()->setBoundingCircle("Asteroid", 100, 100, 100);
 	Ship* ship = (Ship*)_entityManager->getEntity("Ship");
 
 	if ((_masterInstance->_input->isKeyPressed(IND_ESCAPE))) //explosion 
@@ -82,7 +91,8 @@ void GameEngine::processUserInput()
 		{
 			acc -= _accelerationStep;
 			ship->moveForward(acc, true);
-		}else
+		}
+		else
 		{
 			if (!ship->isAnimationStoped())
 				ship->stopAnimation();
@@ -96,7 +106,8 @@ void GameEngine::processUserInput()
 		{
 			acc -= (_accelerationStep * 2);
 			ship->moveForward(acc, true);
-		}else
+		}
+		else
 		{
 			if (!ship->isAnimationStoped())
 				ship->stopAnimation();
@@ -113,13 +124,41 @@ void GameEngine::processUserInput()
 	{
 		_entityManager->saveEntities("../save.js");
 	}
+	if (_masterInstance->_input->isKeyPressed(IND_F11))
+	{
+		_entityManager->loadEntityFromJSON("../save.js", mDelta);
+	}
 }
 
 void GameEngine::manageCollisions()
 {
-	if (_entityManager->checkForCollision("Ship","Asteroid"))
+	if (_entityManager->checkForCollision("Ship", "Asteroid"))
 	{
-		//_entityManager->getEntity("Asteroid")->destroy();
+		_entityManager->removeEntity("Asteroid");
+	}
+	Ship* ship = ((Ship*)_entityManager->getEntity("Ship"));
+	
+	map<std::string, GameEntity*> gameEntityes = _entityManager->getEntities();
+	for (std::map<std::string, GameEntity*>::iterator it = gameEntityes.begin(); it != gameEntityes.end(); ++it)
+	{
+		Projectile** projectiles = ship->getProjectiles();
+		int br = 0;
+
+		while (br < maxProjectiels)
+		{
+			if (_entityManager->getType(it->first) == SpaceBodyObject)
+			{
+				if (_entityManager->checkForCollision("Projectile", (*projectiles), it->first, it->second))
+				{
+					it->second->destroy();
+					//_entityManager->removeEntity(it->first);
+					(*projectiles)->destroy();
+				}
+			}
+
+			*projectiles++;
+			br++;
+		}
 	}
 }
 

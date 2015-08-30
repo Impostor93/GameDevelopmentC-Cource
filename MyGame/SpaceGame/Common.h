@@ -19,8 +19,10 @@ public:
 };
 enum TypeOfGameObject
 {
+	Null,
 	ShipObject,
 	StaticObject,
-	AnimatedObject
+	AnimatedObject,
+	SpaceBodyObject
 };
 

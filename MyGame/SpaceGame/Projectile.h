@@ -18,9 +18,11 @@ public:
 
 	void update();
 
-	void setSpeed(float angle);
+	void setSpeed(float angle, float x, float y);
 
 	void draw();
+
+	void destroy();
 };
 
 #endif
