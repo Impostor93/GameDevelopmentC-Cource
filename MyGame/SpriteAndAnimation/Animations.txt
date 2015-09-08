@@ -1,0 +1,31 @@
+AnimationName=Ship
+mainShip1, 50
+mainShip2, 50
+mainShip3, 50
+mainShip4, 50
+mainShip5, 50
+mainShip6, 50
+mainShip7, 50
+mainShip8, 50
+mainShip9, 50
+mainShip10, 50
+mainShip11, 50
+mainShip12, 50
+mainShip13, 50
+mainShip14, 50
+mainShip15, 50
+AnimationName=Explosion
+Explosion1, 50
+Explosion2, 50
+Explosion3, 50
+Explosion4, 50
+Explosion5, 50
+Explosion6, 50
+Explosion7, 50
+Explosion8, 50
+Explosion9, 50
+Explosion10, 50
+Explosion11, 50
+Explosion12, 50
+Explosion13, 50
+Explosion14, 50
