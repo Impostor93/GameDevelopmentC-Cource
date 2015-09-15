@@ -33,6 +33,8 @@ public:
 	
 	int getHealth();
 	void doDamage(GameEntity* contactEntity);
+
+	void reflect();
 };
 
 #endif

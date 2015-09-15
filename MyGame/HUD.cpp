@@ -28,9 +28,9 @@ void HUD::draw()
 	float windowWidth = getMasterInstance()->_window->getWidth();
 	float scaleFactor = 0.40f;
 
-	this->setPosition(Position3D(windowWidth / 2 - getINDIEntity()->getRegionWidth() / 2, 0, this->getPosition().getZ()));
+	this->setPosition(Position3D(windowWidth / 2 - (getINDIEntity()->getRegionWidth()*0.5f) / 2, 0, this->getPosition().getZ()));
 
-	this->getINDIEntity()->setScale(1, 0.50f);
+	this->getINDIEntity()->setScale(0.5f, 0.50f);
 
 	float y = windowHeight - (_healthBar->getINDIEntity()->getRegionHeight() * scaleFactor);
 
@@ -56,9 +56,10 @@ void HUD::update()
 	}
 
 	_healthBar->changeResource(resource);
-
 	_healthBar->update();
+
 	_shootBar->update();
+	//_shootBar->changeResource(getResourcePath());
 }
 
 void HUD::destroy()

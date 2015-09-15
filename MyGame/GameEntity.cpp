@@ -65,6 +65,7 @@ CIndieLib* GameEntity::getMasterInstance(){ return _masterInstance; }
 std::string GameEntity::getResourcePath(){ return _resourcePath; }
 IND_Surface* GameEntity::getSurface(){ return _surface; }
 int GameEntity::getDemageFactor(){ return _demageFactor; }
+int GameEntity::getAcceleration(){ return this->_acc; }
 //End Getters
 
 //Save/Load
@@ -122,33 +123,61 @@ void GameEntity::deserializeEntity(std::string jsonObject)
 //End Save/Load
 
 //Game play
-void GameEntity::moveForward(float acceleration, bool lockInWindowScreen)
+void GameEntity::moveForward(float accelerationStep, bool lockInWindowScreen)
 {
-	float x = 0.f; x = this->getPosition().getX() + (acceleration * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
-	float y = 0.f; y = this->getPosition().getY() - (acceleration * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	_acc += accelerationStep;
+	if (_acc > _maxAccelerationValue)
+		_acc = _maxAccelerationValue;
+
+	if (_acc < 0)
+	{
+		_acc = 0;
+		return;
+	}
+
+	float x = 0.f; x = this->getPosition().getX() + (_acc * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	float y = 0.f; y = this->getPosition().getY() - (_acc * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
 
 	if (lockInWindowScreen)
 	{
 		_width = this->getINDIEntity()->getRegionWidth() / 2 - 18;
 		_height = this->getINDIEntity()->getRegionHeight() / 2 - 15;
 
-		if (x + _width > _masterInstance->_window->getWidth()) 
+		if (x + _width > _masterInstance->_window->getWidth())
 			x = _masterInstance->_window->getWidth() - _width;
-		if (x - _width < 0) 
+		if (x - _width < 0)
 			x = 0 + _width;
-		if (y + _height > _masterInstance->_window->getHeight()) 
+		if (y + _height > _masterInstance->_window->getHeight())
 			y = _masterInstance->_window->getHeight() - _height;
-		if (y - _height < 0) 
+		if (y - _height < 0)
 			y = _height;
 	}
 
 	this->setPosition(Position3D(x, y, this->getPosition().getZ()));
 }
 
-void GameEntity::moveBackward(float acceleration)
+void GameEntity::moveBackward(float acceleration, bool lockInWindowScreen)
 {
-	float x = 0.f; x = this->getPosition().getX() - (acceleration * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
-	float y = 0.f; y = this->getPosition().getY() + (acceleration * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	if (_acc > 0)
+		_acc -= acceleration;
+
+	float x = 0.f; x = this->getPosition().getX() - (_acc * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	float y = 0.f; y = this->getPosition().getY() + (_acc * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+
+	if (lockInWindowScreen)
+	{
+		_width = this->getINDIEntity()->getRegionWidth() / 2 - 18;
+		_height = this->getINDIEntity()->getRegionHeight() / 2 - 15;
+
+		if (x + _width > _masterInstance->_window->getWidth())
+			x = _masterInstance->_window->getWidth() - _width;
+		if (x - _width < 0)
+			x = 0 + _width;
+		if (y + _height > _masterInstance->_window->getHeight())
+			y = _masterInstance->_window->getHeight() - _height;
+		if (y - _height < 0)
+			y = _height;
+	}
 
 	this->setPosition(Position3D(x, y, this->getPosition().getZ()));
 }

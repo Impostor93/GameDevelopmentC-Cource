@@ -31,6 +31,9 @@ private:
 
 	int _demageFactor = 0;
 
+	const float _maxAccelerationValue = 600.f;
+	float _acc = 0.0f;
+
 public:
 	GameEntity(CIndieLib* master, Position3D position, std::string resourcePath, IND_Surface* surface, float* deltaTime);
 
@@ -49,11 +52,12 @@ public:
 	void deserializeEntity(std::string jsonEntity);
 
 	virtual void moveForward(float acceleration, bool lockInWindow);
-	virtual void moveBackward(float acceleration);
+	virtual void moveBackward(float acceleration, bool lockInWindowScreen);
 
 	void rotateLeft(float rotationSpeed);
 	void rotateRight(float rotationSpeed);
 
+	int getAcceleration();
 	std::string getResourcePath();
 	int getDemageFactor();
 

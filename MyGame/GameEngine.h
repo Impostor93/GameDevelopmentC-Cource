@@ -26,17 +26,20 @@ private:
 	SpriteCordinateMapper* _spriteCordinates;
 	AnimationMapper* _animationMapper;
 
-	const float _maxAccelerationValue = 600.f;
+
 	const float _accelerationStep = 1.f;
 
 	float rotation = 0;
 	float* mDelta = new float(0);
 
 	float mAngle = 0;
-	float acc = 0.0f;
+
+	bool _reflect = false;
 
 	int rotateSpeed = 200;
 
+	void accelerateShip(Ship* ship);
+	void deaccelerateShip(Ship* ship, float accelerationStep);
 public:
 	GameEngine(CIndieLib* _masterInstance);
 

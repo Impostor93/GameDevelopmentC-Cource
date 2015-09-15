@@ -61,3 +61,8 @@ Projectile** Ship::getProjectiles(){ return _projectile; }
 
 int Ship::getHealth(){ return _health; }
 void Ship::doDamage(GameEntity* contactEntity){ _health -= contactEntity->getDemageFactor(); }
+
+void Ship::reflect()
+{
+
+}
