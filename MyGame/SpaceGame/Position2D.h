@@ -1,4 +1,8 @@
 #pragma once
+
+#ifndef POSITION2D_H
+#define POSITION2D_H
+
 class Position2D
 {
 public:
@@ -20,3 +24,4 @@ protected:
 	void setY(float y);
 };
 
+#endif

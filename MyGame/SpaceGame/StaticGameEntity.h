@@ -13,6 +13,9 @@
 
 class StaticGameEntity: public GameEntity
 {
+private:
+	SpriteCordinateMapper* _spriteMapper;
+
 public:
 	StaticGameEntity(CIndieLib* masterInstance, Position3D position, std::string resource, IND_Surface* surface, SpriteCordinateMapper* spriteMapper, float* deltaTime);
 	~StaticGameEntity();
@@ -22,8 +25,7 @@ public:
 
 	void update();
 
-protected:
-	SpriteCordinateMapper* _spriteMapper;
+	void changeResource(std::string resource);
 
 };
 #endif

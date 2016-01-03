@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -10,6 +10,72 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimatedGameEntity.h" />
+    <ClInclude Include="AnimationMapper.h" />
+    <ClInclude Include="AudioPlayer.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="ConfigurationReader.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="FontManager.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="GameEntity.h" />
+    <ClInclude Include="GameEntityManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GamePlayer.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="InstanceManager.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Planet.h" />
+    <ClInclude Include="Position.h" />
+    <ClInclude Include="Position2D.h" />
+    <ClInclude Include="Position3D.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Region.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="Space.h" />
+    <ClInclude Include="SpaceBody.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteCordinateMapper.h" />
+    <ClInclude Include="StaticGameEntity.h" />
+    <ClInclude Include="StaticResources.h" />
+    <ClInclude Include="tools\editor_tileless\CIndieLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimatedGameEntity.cpp" />
+    <ClCompile Include="AnimationMapper.cpp" />
+    <ClCompile Include="AudioPlayer.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="ConfigurationReader.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="GameEntityManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GamePlayer.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="InstanceManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Planet.cpp" />
+    <ClCompile Include="Position2D.cpp" />
+    <ClCompile Include="Position3D.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Region.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Space.cpp" />
+    <ClCompile Include="SpaceBody.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteCordinateMapper.cpp" />
+    <ClCompile Include="StaticGameEntity.cpp" />
+    <ClCompile Include="StaticResources.cpp" />
+    <ClCompile Include="tools\editor_tileless\CIndieLib.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C71606B1-01F1-4F6C-AF0C-551D6AC50A84}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -19,13 +85,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -73,53 +139,17 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\My Stuff\Studying\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless;D:\My Stuff\Studying\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Projects\.Net Projects\SpaceGame\GameDevelopmentC-Cource\MyGame\SpaceGame\irrKlang-1.5.0\include;D:\Projects\.Net Projects\SpaceGame\GameDevelopmentC-Cource\MyGame\SpaceGame\tools\editor_tileless;D:\Projects\.Net Projects\SpaceGame\GameDevelopmentC-Cource\MyGame\SpaceGame\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>D:\My Stuff\Studying\GameDev\GameDev\C-game-homework%28working directory%29\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Projects\.Net Projects\SpaceGame\GameDevelopmentC-Cource\MyGame\SpaceGame\irrKlang-1.5.0\bin\win32-visualStudio;D:\Projects\.Net Projects\SpaceGame\GameDevelopmentC-Cource\MyGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>IndieLib.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="AnimatedGameEntity.cpp" />
-    <ClCompile Include="Common.cpp" />
-    <ClCompile Include="GameEntityManager.cpp" />
-    <ClCompile Include="Position3D.cpp" />
-    <ClCompile Include="Position2D.cpp" />
-    <ClCompile Include="Projectile.cpp" />
-    <ClCompile Include="Region.cpp" />
-    <ClCompile Include="Settings.cpp" />
-    <ClCompile Include="Space.cpp" />
-    <ClCompile Include="GameEntity.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Planet.cpp" />
-    <ClCompile Include="Ship.cpp" />
-    <ClCompile Include="StaticGameEntity.cpp" />
-    <ClCompile Include="StaticResources.cpp" />
-    <ClCompile Include="tools\editor_tileless\CIndieLib.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AnimatedGameEntity.h" />
-    <ClInclude Include="Common.h" />
-    <ClInclude Include="common\include\irrKlang.h" />
-    <ClInclude Include="GameEntityManager.h" />
-    <ClInclude Include="Position3D.h" />
-    <ClInclude Include="Position2D.h" />
-    <ClInclude Include="Projectile.h" />
-    <ClInclude Include="Region.h" />
-    <ClInclude Include="Settings.h" />
-    <ClInclude Include="Space.h" />
-    <ClInclude Include="GameEntity.h" />
-    <ClInclude Include="Planet.h" />
-    <ClInclude Include="Ship.h" />
-    <ClInclude Include="StaticGameEntity.h" />
-    <ClInclude Include="StaticResources.h" />
-    <ClInclude Include="tools\editor_tileless\CIndieLib.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

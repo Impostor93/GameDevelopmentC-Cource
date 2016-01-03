@@ -5,6 +5,9 @@ SpaceBody::SpaceBody(CIndieLib* masterInstance, Position3D position, const char*
 	: StaticGameEntity(masterInstance, position, path, surface, animationMapper->getSpriteCordinateMapper(), deltaTime)
 {
 	_explosion = new AnimatedGameEntity(masterInstance, position, "Explosion", surface, animationMapper, deltaTime);
+
+	this->setDemageFactor(10);
+	_hideSpaceBodyTimeoutTimer = new IND_Timer();
 }
 
 void SpaceBody::draw()
@@ -25,12 +28,8 @@ void SpaceBody::draw()
 }
 void SpaceBody::destroy()
 {
-	_isDestroyed = true;
-	_explosion->setNumReplays(1);
-	Position3D newPos(_explosion->getPosition().getX(), _explosion->getPosition().getY(), _explosion->getPosition().getZ() + 5);
-	_explosion->setPosition(newPos);
-	_explosion->startAnimation();
-	StaticGameEntity::destroy();
+	if (isBodyDestroyedAndExplosionFinished())
+		SpaceBody::~SpaceBody();
 }
 
 void SpaceBody::update()
@@ -38,11 +37,46 @@ void SpaceBody::update()
 	if (_isDestroyed)
 		_explosion->update();
 
+	if (_health <= 0 && getINDIEntity()->isShow())
+	{
+		if (!_hideSpaceBodyTimeoutTimer->isStarted())
+			_hideSpaceBodyTimeoutTimer->start();
+
+		if (_hideSpaceBodyTimeoutTimer->getTicks() > 500)
+		{
+			this->getINDIEntity()->setShow(false);
+			_hideSpaceBodyTimeoutTimer->stop();
+		}
+	}
+	
 	StaticGameEntity::update();
 }
+bool SpaceBody::isBodyDestroyedAndExplosionFinished()
+{
+	return (_health <= 0 && _explosion->isAnimationFinished());
+}
+
+void SpaceBody::doDamage()
+{ 
+	_health--; 
+	if (_health <= 0)
+	{
+		_isDestroyed = true;
+		_explosion->setNumReplays(1);
+		Position3D newPos(_explosion->getPosition().getX(), _explosion->getPosition().getY(), _explosion->getPosition().getZ() + 5);
+		_explosion->setPosition(newPos);
+		_explosion->startAnimation();
+	}
+}
+
+int SpaceBody::getHealth(){ return _health; }
 
 SpaceBody::~SpaceBody()
 {
-	delete _explosion;
+	_explosion->destroy();
+
+	delete _hideSpaceBodyTimeoutTimer;
+
+	_hideSpaceBodyTimeoutTimer = 0;
 	_explosion = 0;
 }

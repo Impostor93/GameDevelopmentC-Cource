@@ -13,25 +13,25 @@
                              (_/                        
 Indielib version: 0.5.1
 
-[Init time]: (Saturday, 29 of August 2015)
+[Init time]: (Monday, 4 of January 2016)
 
-[19:41:51] [ BEGIN ] -- Creating Render --
+[01:43:28] [ BEGIN ] -- Creating Render --
                      {
-[19:41:51] [ BEGIN ]    -- Creating SDL window --
+[01:43:28] [ BEGIN ]    -- Creating SDL window --
                         {
            [  OK   ]       Window created
            [ INFO  ]       Mode: Window
                         }
-[19:41:51] [  END  ]    Window OK [Elapsed time = 0.03 seg]
-[19:41:51] [ BEGIN ]    -- Initializing Direct3D --
+[01:43:28] [  END  ]    Window OK [Elapsed time = 0.061 seg]
+[01:43:28] [ BEGIN ]    -- Initializing Direct3D --
                         {
            [  OK   ]       Creating D3D object
            [  OK   ]       Obtaining the adapter
            [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
-           [ INFO  ]       Video mode: 1100 x 688 x 32
+           [ INFO  ]       Video mode: 1100 x 680 x 32
                         }
-[19:41:51] [  END  ]    Direct3D OK [Elapsed time = 0.159 seg]
-[19:41:51] [ BEGIN ]    -- Hardware information --
+[01:43:28] [  END  ]    Direct3D OK [Elapsed time = 0.134 seg]
+[01:43:28] [ BEGIN ]    -- Hardware information --
                         {
            [ INFO  ]       Direct3D version: DXSDK November 2007
            [ INFO  ]       Mark: ?
@@ -41,50 +41,50 @@ Indielib version: 0.5.1
            [ INFO  ]       Vertex Shader: 3 . 0 
            [ INFO  ]       Pixel Shader: 3 . 0
                         }
-[19:41:51] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
-[19:41:51] [ BEGIN ]    -- Initializing ImageManager --
+[01:43:28] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
+[01:43:28] [ BEGIN ]    -- Initializing ImageManager --
                         {
            [  OK   ]       Preparing ImageManager
            [ INFO  ]       Using FreeImage version:  3.15.3
            [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
                         }
-[19:41:51] [  END  ]    ImageManager Initialised [Elapsed time = 0.001 seg]
-[19:41:51] [ BEGIN ]    -- Initializing SurfaceManager --
+[01:43:28] [  END  ]    ImageManager Initialised [Elapsed time = 0.001 seg]
+[01:43:28] [ BEGIN ]    -- Initializing SurfaceManager --
                         {
            [  OK   ]       Checking IND_Render
            [  OK   ]       Checking IND_ImageManager
                         }
-[19:41:51] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
-[19:41:51] [ BEGIN ]    -- Initializing AnimationManager --
+[01:43:28] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
+[01:43:28] [ BEGIN ]    -- Initializing AnimationManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[19:41:51] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
-[19:41:51] [ BEGIN ]    -- Initializing FontManager --
+[01:43:28] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[01:43:28] [ BEGIN ]    -- Initializing FontManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[19:41:51] [  END  ]    FontManager OK [Elapsed time = 0 seg]
-[19:41:51] [ BEGIN ]    -- Initializing Entity2dManager --
+[01:43:28] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[01:43:28] [ BEGIN ]    -- Initializing Entity2dManager --
                         {
            [  OK   ]       Preparing Entity2dManager
            [  OK   ]        Checking IND_Render
                         }
-[19:41:51] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
-[19:41:51] [ BEGIN ]    -- Loading Image --
+[01:43:28] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[01:43:28] [ BEGIN ]    -- Loading Image --
                         {
-           [ INFO  ]       File name: D:/Vs2012 Project/C++ game development course/Sprite.png
+           [ INFO  ]       File name: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpriteAndAnimation/Sprite.png
            [ INFO  ]       Extension: png
            [ INFO  ]       Size: 3170 x 3124
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[19:41:52] [  END  ]    Image loaded [Elapsed time = 0.283 seg]
-[19:41:52] [ BEGIN ]    -- Creating surface --
+[01:43:28] [  END  ]    Image loaded [Elapsed time = 0.282 seg]
+[01:43:28] [ BEGIN ]    -- Creating surface --
                         {
-           [ INFO  ]       From image: D:/Vs2012 Project/C++ game development course/Sprite.png
+           [ INFO  ]       From image: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpriteAndAnimation/Sprite.png
            [ INFO  ]       Type: IND_ALPHA
            [ INFO  ]       Quality: IND_32
            [ INFO  ]       Image size: 3170 x 3124
@@ -92,124 +92,329 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 926 x 972
                         }
-[19:41:52] [  END  ]    Surface created [Elapsed time = 0.053 seg]
-[19:41:52] [ BEGIN ]    -- Freeing image --
+[01:43:29] [  END  ]    Surface created [Elapsed time = 0.056 seg]
+[01:43:29] [ BEGIN ]    -- Freeing image --
                         {
-           [ INFO  ]       File name: D:/Vs2012 Project/C++ game development course/Sprite.png
+           [ INFO  ]       File name: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpriteAndAnimation/Sprite.png
                         }
-[19:41:52] [  END  ]    Ok [Elapsed time = 0.003 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    Ok [Elapsed time = 0.003 seg]
+[01:43:29] [ BEGIN ]    -- Loading Image --
+                        {
+           [ INFO  ]       File name: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpaceGame/resources/font_small.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 256 x 256
+           [ INFO  ]       Bpp: 4
+           [ INFO  ]       Format: IND_RGBA
+                        }
+[01:43:29] [  END  ]    Image loaded [Elapsed time = 0.072 seg]
+[01:43:29] [ BEGIN ]    -- Parsing and loading font --
+                        {
+           [ INFO  ]       File name: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpaceGame/resources/font_small.xml
+[01:43:29] [ BEGIN ]       -- Creating surface --
+                           {
+           [ INFO  ]          From image: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpaceGame/resources/font_small.png
+           [ INFO  ]          Type: IND_ALPHA
+           [ INFO  ]          Quality: IND_32
+           [ INFO  ]          Image size: 256 x 256
+           [ INFO  ]          Block size: 256 x 256
+           [ INFO  ]          Number of blocks: 1 x 1
+           [ INFO  ]          Spare (Right | Down): 0 x 0
+                           }
+[01:43:29] [  END  ]       Surface created [Elapsed time = 0 seg]
+                        }
+[01:43:29] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[01:43:29] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: D:/Projects/.Net Projects/SpaceGame/GameDevelopmentC-Cource/MyGame/SpaceGame/resources/font_small.png
+                        }
+[01:43:29] [  END  ]    Ok [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 0
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 1
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 2
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 3
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 4
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 5
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 6
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 7
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 8
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 9
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 10
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 11
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0.001 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 12
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 13
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 14
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 15
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 16
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 17
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 18
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 19
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 20
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:52] [ BEGIN ]    -- Adding 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 21
                         }
-[19:41:52] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[19:41:57] [ BEGIN ]    -- Freeing 2d entity --
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 22
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 23
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 24
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 25
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 26
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 27
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 28
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 29
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 30
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 31
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 32
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 33
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 34
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 35
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 36
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 37
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 38
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 39
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 40
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 41
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 42
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 43
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 44
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 45
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Loading Image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/font_small.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 256 x 256
+           [ INFO  ]       Bpp: 4
+           [ INFO  ]       Format: IND_RGBA
+                        }
+[01:43:29] [  END  ]    Image loaded [Elapsed time = 0.002 seg]
+[01:43:29] [ BEGIN ]    -- Parsing and loading font --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/font_small.xml
+[01:43:29] [ BEGIN ]       -- Creating surface --
+                           {
+           [ INFO  ]          From image: ../SpaceGame/resources/font_small.png
+           [ INFO  ]          Type: IND_ALPHA
+           [ INFO  ]          Quality: IND_32
+           [ INFO  ]          Image size: 256 x 256
+           [ INFO  ]          Block size: 256 x 256
+           [ INFO  ]          Number of blocks: 1 x 1
+           [ INFO  ]          Spare (Right | Down): 0 x 0
+                           }
+[01:43:29] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+                        }
+[01:43:29] [  END  ]    Font parsed and loaded [Elapsed time = 0.002 seg]
+[01:43:29] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../SpaceGame/resources/font_small.png
+                        }
+[01:43:29] [  END  ]    Ok [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 46
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 47
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 48
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:29] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 49
+                        }
+[01:43:29] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[01:43:49] [ BEGIN ]    -- Freeing 2d entity --
                         {
            [ INFO  ]       Name: 0
                         }
-[19:41:57] [  END  ]    Ok [Elapsed time = 0 seg]
+[01:43:49] [  END  ]    Ok [Elapsed time = 0 seg]
+[01:44:01] [ BEGIN ]    -- Freeing 2d entity --
+                        {
+           [ INFO  ]       Name: 0
+                        }
+[01:44:01] [  END  ]    Ok [Elapsed time = 0 seg]

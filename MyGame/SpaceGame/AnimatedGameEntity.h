@@ -22,6 +22,7 @@ public:
 	void stopAnimation();
 	void startAnimation();
 	bool isAnimationStoped();
+	bool isAnimationFinished();
 	AnimationMapper* getAnimationMapper();
 
 	void update();

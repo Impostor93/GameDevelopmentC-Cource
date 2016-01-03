@@ -1,8 +1,9 @@
 #include "GameEntityManager.h"
 
-GameEntityManager::GameEntityManager(CIndieLib* master, SpriteCordinateMapper* spriteCordinates, AnimationMapper* animationMapper, const char* resourcePath) :
-_indiMasterInstance(master), _spriteCordinates(spriteCordinates), _animationMapper(animationMapper)
+GameEntityManager::GameEntityManager(CIndieLib* master, SpriteCordinateMapper* spriteCordinates, AnimationMapper* animationMapper, const char* resourcePath,ISoundEngine* soundEngine, float* deltaTime) :
+_indiMasterInstance(master), _spriteCordinates(spriteCordinates), _animationMapper(animationMapper), _soundEngine(soundEngine)
 {
+	_deltaTime = deltaTime;
 	_sharedSurface = IND_Surface::newSurface();
 	_indiMasterInstance->_surfaceManager->add(_sharedSurface, resourcePath, IND_OPAQUE, IND_32);
 }
@@ -10,7 +11,13 @@ _indiMasterInstance(master), _spriteCordinates(spriteCordinates), _animationMapp
 
 GameEntityManager::~GameEntityManager()
 {
-	delete _indiMasterInstance;
+	_indiMasterInstance->_surfaceManager->remove(_sharedSurface);
+	if (_sharedSurface)
+		_sharedSurface->destroy();
+
+	_soundEngine->drop();
+
+	_sharedSurface = 0;
 }
 
 void GameEntityManager::addEntity(std::string key, GameEntity* entity, TypeOfGameObject type)
@@ -25,6 +32,8 @@ GameEntity* GameEntityManager::getEntity(std::string key)
 	else
 		return NULL;
 }
+IND_Surface* GameEntityManager::getSurface(){ return _sharedSurface; }
+
 map<std::string, GameEntity*> GameEntityManager::getEntities()
 {
 	return _listOfGameEntities;
@@ -38,24 +47,29 @@ TypeOfGameObject GameEntityManager::getType(std::string key)
 }
 void GameEntityManager::removeEntity(std::string key)
 {
-	if (getEntity(key) != NULL)
-		getEntity(key)->destroy();
+  	GameEntity* entity = getEntity(key);
+	if (entity != NULL)
+		entity->destroy();
+	
+	_listOfGameEntities[key] = 0;
 
 	_listOfGameEntities.erase(key);
 	_listOfGameEntityNamesAndTypes.erase(key);
 }
 
-void GameEntityManager::createAndAddEntity(std::string key, TypeOfGameObject type, Position3D position, const char* resourcePath, float* deltaTime)
+void GameEntityManager::createAndAddEntity(std::string key, TypeOfGameObject type, Position3D position, const char* resourcePath)
 {
 	GameEntity* entity = 0;
 	if (type == ShipObject)
-		entity = new Ship(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
+		entity = new Ship(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, _deltaTime);
 	else if (type == SpaceBodyObject)
-		entity = new SpaceBody(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
+		entity = new SpaceBody(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, _deltaTime);
 	else if (type == AnimatedObject)
-		entity = new AnimatedGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, deltaTime);
-	else
-		entity = new StaticGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _spriteCordinates, deltaTime);
+		entity = new AnimatedGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _animationMapper, _deltaTime);
+	else if (type == StaticObject)
+		entity = new StaticGameEntity(_indiMasterInstance, position, resourcePath, _sharedSurface, _spriteCordinates, _deltaTime);
+	else if (type == HUDObject)
+		entity = new HUD(_indiMasterInstance, position, resourcePath, _sharedSurface, _spriteCordinates, _deltaTime);
 
 	addEntity(key, entity, type);
 }
@@ -81,10 +95,7 @@ void GameEntityManager::loadEntityFromJSON(std::string fileName, float* deltaTim
 	if (_listOfGameEntities.size() != 0 && _listOfGameEntityNamesAndTypes.size() != 0)
 	{
 		for (std::map<std::string, GameEntity*>::iterator it = _listOfGameEntities.begin(); it != _listOfGameEntities.end(); ++it)
-		{
 			it->second->destroy();
-			it->second->~GameEntity();
-		}
 
 		_listOfGameEntityNamesAndTypes.clear();
 		_listOfGameEntities.clear();
@@ -108,7 +119,7 @@ void GameEntityManager::loadEntityFromJSON(std::string fileName, float* deltaTim
 				typeOfObject = (TypeOfGameObject)Common::StringToInt(keyValue[1]);
 		}
 		
-		createAndAddEntity(key, typeOfObject, Position3D(0, 0, 0), "", deltaTime);//When load animations throw exception because empty resource!
+		createAndAddEntity(key, typeOfObject, Position3D(0, 0, 0), "");//When load animations throw exception because empty resource!
 
 		getEntity(key)->deserializeEntity(line);
 	}
@@ -125,6 +136,8 @@ void GameEntityManager::update()
 {
 	for (std::map<std::string, GameEntity*>::iterator it = _listOfGameEntities.begin(); it != _listOfGameEntities.end(); ++it)
 		it->second->update();
+
+	ClearDestoriedSpaceBody();
 }
 
 void GameEntityManager::setRectangleCollisionArea(std::string entityKey, float offsetX, float offsetY, float width, float height)
@@ -159,8 +172,49 @@ bool GameEntityManager::checkForCollision(std::string entityKey, GameEntity* ent
 	if (!entity || !secondEntity)
 		return false;
 
-	if (!entity->getINDIEntity() || !secondEntity->getINDIEntity())
+	if (entity->getINDIEntity() == NULL || secondEntity->getINDIEntity()==NULL)
 		return false;
 
 	return _indiMasterInstance->_entity2dManager->isCollision(entity->getINDIEntity(), entityKey.c_str(), secondEntity->getINDIEntity(), secondEntityKey.c_str());
+}
+
+void GameEntityManager::ClearDestoriedSpaceBody()
+{
+	std::vector<std::string> keysOfObjectForDelete;
+
+	for (std::map<std::string, GameEntity*>::iterator it = _listOfGameEntities.begin(); it != _listOfGameEntities.end(); ++it)
+	{
+		std::string key = it->first;
+		if (key != "" && getType(key) == SpaceBodyObject)
+		{
+			SpaceBody* spaceBody = (SpaceBody*)it->second;
+			if (spaceBody->getHealth() <= 0)
+			{
+				spaceBody->getINDIEntity()->deleteBoundingAreas(key.c_str());
+				char* resource = "D:/Vs2012 Project/C++ game development course/ShipGame/GameDevelopmentC-Cource/MyGame/SpaceGame/irrKlang/OriginalIrrKlang/media/explosion.wav";
+				if (!_soundEngine->isCurrentlyPlaying(resource))
+					_soundEngine->play2D(resource, false);
+			}
+
+			if (spaceBody->isBodyDestroyedAndExplosionFinished())
+				keysOfObjectForDelete.push_back(key);
+		}
+	}
+	for (int i = 0; i < keysOfObjectForDelete.size(); i++){
+		this->removeEntity(keysOfObjectForDelete[i]);
+	}
+}
+
+void GameEntityManager::registerEntityForRemove(std::string key)
+{
+	_listOfGameEntitiesToRemove.push_back(key);
+}
+void GameEntityManager::removeRegistratedEntities()
+{
+	for (int i = 0; i < _listOfGameEntitiesToRemove.size(); i++) 
+	{
+		removeEntity(_listOfGameEntitiesToRemove.at(i));
+	}
+
+	_listOfGameEntitiesToRemove.clear();
 }

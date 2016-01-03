@@ -4,7 +4,10 @@ AnimatedGameEntity::AnimatedGameEntity(CIndieLib* masterInstance, Position3D pos
 	:GameEntity(masterInstance, position, resourcePath, surface, deltaTime)
 {
 	_animationMapper = animationMapper;
-	_animationFrame = new std::vector<Frame>(_animationMapper->getAnimationByName(resourcePath));
+
+	if (resourcePath != "")
+		_animationFrame = new std::vector<Frame>(_animationMapper->getAnimationByName(resourcePath));
+
 	_timer = new IND_Timer();
 }
 
@@ -12,15 +15,15 @@ void AnimatedGameEntity::draw()
 {
 	getINDIEntity()->setSurface(getSurface());
 
-	_frame = new Frame(_animationFrame->at(_animationCurrentIndex));
-	_region = new Region(_frame->getRegionOfFrame());
+	_frame = &_animationFrame->at(_animationCurrentIndex);
+	_region = &_frame->getRegionOfFrame();
 
 	getINDIEntity()->setRegion(_region->getOffSetX(), _region->getOffSetY(), _region->getWidth(), _region->getHeight());
 }
 
 void AnimatedGameEntity::destroy()
 {
-
+	AnimatedGameEntity::~AnimatedGameEntity();
 }
 void AnimatedGameEntity::update()
 {
@@ -79,15 +82,15 @@ void AnimatedGameEntity::setAngleXYZ(float x, float y, float z)
 void AnimatedGameEntity::setPosition(Position3D position)
 {
 	_position = position;
+}
 
-	//if (getINDIEntity())
-	//	getINDIEntity()->setPosition(position.getX(), position.getY(), position.getZ());
+bool AnimatedGameEntity::isAnimationFinished()
+{
+	return _numberOfReplay > 0 && _numberOfReplay <= _currentNumberOfReplay;
 }
 
 AnimatedGameEntity::~AnimatedGameEntity()
-{
-	delete _frame;
-	delete _region;
+{	
 	delete _animationFrame;
 	delete _timer;
 

@@ -2,29 +2,24 @@
 
 
 GameEntity::GameEntity(CIndieLib* masterInstance, Position3D position, std::string resourcePath, IND_Surface* surface, float* deltaTime)
-	:_masterInstance(masterInstance), _position(position), _resourcePath(resourcePath), _surface(surface), _deltaTime(deltaTime)
+	:GameObject(position), _masterInstance(masterInstance), _resourcePath(resourcePath), _surface(surface), _deltaTime(deltaTime)
 {
 	_entity = IND_Entity2d::newEntity2d();
-	_masterInstance->_entity2dManager->add(_entity);
+	_entity->setPosition(_position.getX(), _position.getY(), _position.getZ());
 
-	_width = this->getINDIEntity()->getRegionWidth() / 2;
-	_height = this->getINDIEntity()->getRegionHeight() / 2;
+	_masterInstance->_entity2dManager->add(_entity);
 
 	_angleZ = this->getINDIEntity()->getAngleZ();
 }
 
 GameEntity::~GameEntity()
 {
-	delete _masterInstance;
-	delete _deltaTime;
+	_masterInstance->_entity2dManager->remove(getINDIEntity());
 	
 	if (_entity)
 		_entity->destroy();
 
-	//_entity = 0;
-
-	_deltaTime = 0;
-	_masterInstance = 0;
+	_entity = 0;
 }
 
 void GameEntity::destroy()
@@ -33,6 +28,7 @@ void GameEntity::destroy()
 		_entity->destroy();
 		_masterInstance->_entity2dManager->remove(_entity);
 	}
+	GameEntity::~GameEntity();
 }
 
 void GameEntity::update()
@@ -42,18 +38,30 @@ void GameEntity::update()
 }
 
 //Setters
-void GameEntity::setPosition(Position3D position)
+void GameEntity::setHotSpot(float x, float y)
 {
-	_position = position;
+	float surfaceWidth = _entity->getSurface()->getWidth();
+	float surfaceHeight = _entity->getSurface()->getHeight();
+
+	float entityWidth = _entity->getRegionWidth();
+	float entityHeight = _entity->getRegionHeight();
+
+	float midleWidth = (entityWidth / surfaceWidth) * x;
+	float midleHeight = (entityHeight / surfaceHeight) * y;
+
+	_entity->setHotSpot(midleWidth, midleHeight);
 }
+void GameEntity::setResourcePath(std::string resource){ _resourcePath = resource; }
+void GameEntity::setDemageFactor(int demageFactor){ this->_demageFactor = demageFactor; }
 //End Setters
 
 //Getters
-Position3D GameEntity::getPosition(){ return _position; }
 IND_Entity2d* GameEntity::getINDIEntity(){ return _entity; }
 CIndieLib* GameEntity::getMasterInstance(){ return _masterInstance; }
 std::string GameEntity::getResourcePath(){ return _resourcePath; }
 IND_Surface* GameEntity::getSurface(){ return _surface; }
+int GameEntity::getDemageFactor(){ return _demageFactor; }
+int GameEntity::getAcceleration(){ return this->_acc; }
 //End Getters
 
 //Save/Load
@@ -111,30 +119,62 @@ void GameEntity::deserializeEntity(std::string jsonObject)
 //End Save/Load
 
 //Game play
-void GameEntity::moveForward(float acceleration, bool lockInWindowScreen)
+void GameEntity::moveForward(float accelerationStep, bool lockInWindowScreen)
 {
-	float x = 0.f; x = this->getPosition().getX() + (acceleration * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
-	float y = 0.f; y = this->getPosition().getY() - (acceleration * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	_acc += accelerationStep;
+	if (_acc > _maxAccelerationValue)
+		_acc = _maxAccelerationValue;
+
+	if (_acc < 0)
+	{
+		_acc = 0;
+		return;
+	}
+
+	_move(calcuateNewPositionOnMovingForward(), lockInWindowScreen);
+}
+Position2D GameEntity::calcuateNewPositionOnMovingForward()
+{
+	float x = this->getPosition().getX() + (_acc * (*_deltaTime)) *(float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	float y = this->getPosition().getY() - (_acc * (*_deltaTime)) *(float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+
+	return Position2D(x, y);
+}
+
+void GameEntity::moveBackward(float acceleration, bool lockInWindowScreen)
+{
+	if (_acc > 0)
+		_acc -= acceleration;
+
+	_move(calcuateNewPositionOnMovingBackward(), lockInWindowScreen);
+}
+Position2D GameEntity::calcuateNewPositionOnMovingBackward()
+{
+	float x = this->getPosition().getX() - (_acc * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+	float y = this->getPosition().getY() + (_acc * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
+
+	return Position2D(x, y);
+}
+
+void GameEntity::_move(Position2D newPosition, bool lockInWindowScreen)
+{
+	float x = newPosition.getX();
+	float y = newPosition.getY();
 
 	if (lockInWindowScreen)
 	{
-		if (x + _width > _masterInstance->_window->getWidth()) 
-			x = _masterInstance->_window->getWidth();
-		if (x - _width < 0) 
-			x = 0;
-		if (y + _height > _masterInstance->_window->getHeight()) 
-			y = _masterInstance->_window->getHeight();
-		if (y - _height < 0) 
-			y = 0;
+		_width = this->getINDIEntity()->getRegionWidth() / 2 - 18;
+		_height = this->getINDIEntity()->getRegionHeight() / 2 - 15;
+
+		if (x + _width > _masterInstance->_window->getWidth())
+			x = _masterInstance->_window->getWidth() - _width;
+		if (x - _width < 0)
+			x = 0 + _width;
+		if (y + _height > _masterInstance->_window->getHeight())
+			y = _masterInstance->_window->getHeight() - _height;
+		if (y - _height < 0)
+			y = _height;
 	}
-
-	this->setPosition(Position3D(x, y, this->getPosition().getZ()));
-}
-
-void GameEntity::moveBackward(float acceleration)
-{
-	float x = 0.f; x = this->getPosition().getX() - (acceleration * (*_deltaTime)) * (float)sin(this->getINDIEntity()->getAngleZ() / 180.f * PI);
-	float y = 0.f; y = this->getPosition().getY() + (acceleration * (*_deltaTime)) * (float)cos(this->getINDIEntity()->getAngleZ() / 180.f * PI);
 
 	this->setPosition(Position3D(x, y, this->getPosition().getZ()));
 }
@@ -142,9 +182,13 @@ void GameEntity::moveBackward(float acceleration)
 void GameEntity::rotateLeft(float rotationSpeed)
 {
 	_angleZ = this->getINDIEntity()->getAngleZ() - rotationSpeed * (*_deltaTime);
+	if (_angleZ <= -360)
+		_angleZ = 0;
 }
 void GameEntity::rotateRight(float rotationSpeed)
 {
 	_angleZ = this->getINDIEntity()->getAngleZ() + rotationSpeed * (*_deltaTime);
+	if (_angleZ >= 360)
+		_angleZ = 0;
 }
 //End Game play

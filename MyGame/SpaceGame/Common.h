@@ -16,6 +16,9 @@ public:
 
 	static std::string trimString(std::string value);
 	static std::vector<std::string> splitString(std::string stringForSearching, char separator);
+
+	//Constants
+
 };
 enum TypeOfGameObject
 {
@@ -23,6 +26,23 @@ enum TypeOfGameObject
 	ShipObject,
 	StaticObject,
 	AnimatedObject,
-	SpaceBodyObject
+	SpaceBodyObject,
+	HUDObject
+};
+enum ShipState
+{
+	Accelerate,
+	Deaccelerate,
+	ReflectBack,
+	ReflectFront,
+	Soar,
+	Peace,
+	AccelerateBack
+};
+enum ShipRotationState
+{
+	Left,
+	Right,
+	None
 };
 
